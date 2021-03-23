@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,59 +8,83 @@
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    
+
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
 
-    <header class="header container-inner">
+        <header class="header container-inner">
 
-        <div class="header__head container-inner">
-            <div class="header__left">
-                <a href="#" class="header__logo logo">
-                    <img src="images/logo.png" alt="logo">
-                    <span class="logo__text">bran<span class="logo__last-letter">d</span></span>
-                </a>
-    
-                <form action="#" class="header__form search-form">
-                    <a class="search-form__browse-link" href="#">browse<span class="fa-caret-down"></span></a>
-                    <input class="search-form__input" type="text" placeholder="Search for Item">
-                    <button class="search-form__button"><span class="fa-search"></span></button>
-                </form>
+            <div class="header__head container-inner">
+                <div class="header__left">
+                    <a href="#" class="header__logo logo">
+                        <img src="images/logo.png" alt="logo">
+                        <span class="logo__text">bran<span class="logo__last-letter">d</span></span>
+                    </a>
+
+                    <form action="#" class="header__form search-form">
+                        <a class="search-form__browse-link" href="#">browse<span class="fa-caret-down"></span></a>
+                        <input class="search-form__input" type="text" placeholder="Search for Item">
+                        <button class="search-form__button"><span class="fa-search"></span></button>
+                    </form>
+                </div>
+
+
+                <div class="header__right">
+                    <a href="#" class="header__basket"><img src="images/basket.png" alt="basket"></a>
+                    <a href="" class="header__button button">my account<span class="fa-caret-down"></span></a>
+                </div>
+
             </div>
 
+            <nav class="header__menu">
+                <ul class="menu">
+                    <li class="menu__item"><a href="#" class="menu__link">home</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">man</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">women</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">kids</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">accoseriese</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">featured</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">hot deals</a></li>
+                </ul>
+            </nav>
+        </header>
 
-            <div class="header__right">
-                <a href="#" class="header__basket"><img src="images/basket.png" alt="basket"></a>
-                <a href="" class="header__button button">my account<span class="fa-caret-down"></span></a>
+        <div class="banner container-inner">
+            <div class="banner__container ">
+                <div class="banner__heading">
+                    <h1>the brand</h1>
+                    <h3>of luxerious <span>fashion</span></h3>
+                </div>
             </div>
-
         </div>
 
-        <nav class="header__menu">
-            <ul class="menu">
-                <li class="menu__item"><a href="#" class="menu__link">home</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">man</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">women</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">kids</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">accoseriese</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">featured</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">hot deals</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="banner container-inner">
-        <div class="banner__container ">
-            <div class="banner__heading">
-                <h1>the brand</h1>
-                <h3>of luxerious <span>fashion</span></h3>
+        <div class="promotions container-inner">
+            <div class="promotions__column">
+                <div class="promotions__item"><img class="promotions__image" src="images/item1.jpg" alt="item-1">
+                    <div class="promotions__text">hot deal<h4 class="promotions__heading">for men</h4>
+                    </div>
+                </div>
+                <div class="promotions__item"><img class="promotions__image" src="images/item2.jpg" alt="item-2">
+                    <div class="promotions__text">LUXIROUS & trendy<h4 class="promotions__heading">ACCESORIES</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="promotions__column">
+                <div class="promotions__item"><img class="promotions__image" src="images/item3.jpg" alt="item-3">
+                    <div class="promotions__text">30% offer<h4 class="promotions__heading">women</h4>
+                    </div>
+                </div>
+                <div class="promotions__item"><img class="promotions__image" src="images/item4.jpg" alt="item-4">
+                    <div class="promotions__text">new arrivals<h4 class="promotions__heading">for kids</h4>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
-
-
-</div>
 </body>
+
 </html>
