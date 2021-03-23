@@ -1,12 +1,62 @@
 /*styles*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 body {
-  font-family: Lato, AdobeInvisFont, MyriadPro-Regular;
+  font-family: Lato, AdobeInvisFont, MyriadPro-Regular, FontAwesome;
 }
 
 .container {
   margin: auto;
   max-width: 1600px;
+}
+
+.container-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.header__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 25px 0;
+}
+
+.header__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 610px;
+  width: 100%;
+}
+
+.header__basket {
+  margin: 0 26px 0 0;
+}
+
+.header__logo {
+  margin: 0 37px 0 0;
+}
+
+.header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .logo {
@@ -16,12 +66,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.025em;
   color: #222222;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: block;
+  min-width: 170px;
 }
 
 .logo__text {
@@ -33,5 +79,97 @@ body {
 .logo__last-letter {
   font-weight: 900;
   color: #f16d7f;
+}
+
+.search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 38px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.search-form__browse-link {
+  font-size: 14px;
+  line-height: 38px;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  color: #222222;
+  text-transform: capitalize;
+  background-color: #cdcdcc;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f5f5f5));
+  background-image: linear-gradient(180deg, #f9f9f9 0%, #f5f5f5 100%);
+  border: 1px solid #e6e6e6;
+  border-radius: 3px 0px 0px 3px;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.search-form__browse-link > span {
+  color: #838383;
+  padding: 0 0 0 2px;
+}
+
+.search-form__input {
+  padding: 0 0 0 15px;
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  min-width: 80px;
+  -ms-flex-preferred-size: 277px;
+      flex-basis: 277px;
+}
+
+.search-form__button {
+  border-radius: 0px 3px 3px 0px;
+  border: 1px solid #e6e6e6;
+  background-color: #ffffff;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.search-form__button > span {
+  color: #a4a4a4;
+}
+
+.button {
+  background-color: #f16d7f;
+  display: inline-block;
+  padding: 0 12px 0 19px;
+  font-size: 15px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+  line-height: 38px;
+  height: 38px;
+  text-transform: capitalize;
+  width: 100px;
+}
+
+.button > span {
+  padding: 0 0 0 8px;
+}
+
+.menu {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu__link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+  padding: 18px 22px;
 }
 /*# sourceMappingURL=style.css.map */
