@@ -49,6 +49,12 @@ body {
         display: flex;
         align-items: flex-end;
     }
+
+    &__button {
+        padding: 0 12px 0 19px;
+        font-size: 15px;
+        line-height: 38px;
+    }
 }
 
 .logo {
@@ -121,19 +127,20 @@ body {
 .button {
     background-color: $second_color;
     display: inline-block;
-    padding: 0 12px 0 19px;
-    font-size: 15px;
-    line-height: 32px;
     font-weight: 400;
     letter-spacing: 0.025em;
     color: #ffffff;
-    line-height: 38px;
-    height: 38px;
     text-transform: capitalize;
-    width: 100px;
+
 
     & > span {
         padding: 0 0 0 8px;
+    }
+
+    &:hover {
+        background: #ffffff;
+        color: $second_color;
+        outline: 1px solid $second_color;
     }
 }
 .menu {
@@ -149,6 +156,14 @@ body {
         text-transform: uppercase;
         color: #222222;
         padding: 18px 22px;
+
+        &:hover {
+            color: $second_color;
+        }
+
+        &:active {
+            color: $second_color;
+        }
     }
 }
 
@@ -196,6 +211,7 @@ body {
 
     &__image {
         width: 100%;
+        display: block;
     }
 
     &__column {
@@ -206,6 +222,13 @@ body {
     &__item {
         width: 100%;
         position: relative;
+
+        &:hover {
+            box-shadow: 0 0 3px 0px rgb(87, 87, 87);
+            transition-duration: 200ms;
+            transition-timing-function: linear;
+        }
+
     }
 
     &__text {
@@ -228,8 +251,131 @@ body {
     }
 }
 
+.featured {
+    text-align: center;
+    &__heading {
+        font-size: 30px;
+        line-height: 54px;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        color: #222222;
+        margin: 100px * 100% / $site-width 0 0 0;
+    }
+
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
+        gap: 26px;
+        justify-content: space-between;
+        margin: 60px * 100% / $site-width 0 0 0;
+    }
+
+    &__item {
+        position: relative;
+        transition-timing-function: linear;
+        transition-duration: 200ms;
+        &:hover {
+            box-shadow: 0 0 3px 0px rgb(87, 87, 87);
+            transition-duration: 200ms;
+            transition-timing-function: linear;
+        }
+    }
+
+    &__price {
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $second_color;
+        padding: 0 0 20px 15px;
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
+    }
+
+    &__text {
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #222222;
+        padding: 19px 0 12px 15px;
+        display: inline-block;
+
+        &:hover {
+            color: $second_color;
+        }
+    }
+
+    &__basket-layer {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 280px;
+        background: #484848cf;
+        display: flex;
+        justify-content: center;
+        transition-duration: 300ms;
+        transition-timing-function: linear;
+
+        &:hover {
+            opacity: 1;
+            transition-duration: 300ms;
+            transition-timing-function: linear;
+        }
+    }
+
+    &__link {
+        display: flex;
+        width: 123px;
+        height: 39px;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #ffffff;
+        align-items: center;
+        border: 1px solid #ffffff;
+        justify-content: center;
+        margin: 98px 0 0 0;
+
+        &:hover {
+            background: white;
+            color: #484848cf;
+        }
+    }
+
+    &__img-basket {
+        padding: 0 8px 0 0;
+    }
+
+    &__button {
+        padding: 13px 20px 13px 24px;
+        margin: 49px * 100% / $site-width 0 0 0;
+        text-align: center;
+    }
+}
+
+.text {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    color: #898989;
+}
+
 @media (max-width: 768px) {
     .promotions {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+
+    .featured {
+        &__items {
+            justify-content: center;
+        }
     }
 }
