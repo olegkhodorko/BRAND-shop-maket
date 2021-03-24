@@ -10,6 +10,10 @@ body {
     font-family: Lato, AdobeInvisFont, MyriadPro-Regular, FontAwesome;
 }
 
+input:focus-visible {
+    outline: none;
+}
+
 .container {
     margin: auto;
     max-width: $site-width;
@@ -128,6 +132,7 @@ body {
         border: 1px solid #e6e6e6;
         min-width: 80px;
         flex-basis: 277px;
+
     }
 
     &__button {
@@ -275,6 +280,21 @@ body {
         color: #222222;
     }
 
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__stars {
+        margin: 0 12px 0 0;
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #e4af48;
+        display: none;
+    }
+
     &__items {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
@@ -287,10 +307,15 @@ body {
         position: relative;
         transition-timing-function: linear;
         transition-duration: 200ms;
+        text-align-last: left;
         &:hover {
-            box-shadow: 0 0 3px 0px rgb(87, 87, 87);
+            box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.15);
             transition-duration: 200ms;
             transition-timing-function: linear;
+        }
+
+        &:hover .featured__stars {
+            display: block;
         }
     }
 
@@ -316,10 +341,18 @@ body {
         color: #222222;
         padding: 19px 0 12px 15px;
         display: inline-block;
+        text-align: left;
 
         &:hover {
             color: $second_color;
         }
+    }
+
+    &__item-info-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
     }
 
     &__basket-layer {
@@ -342,6 +375,11 @@ body {
         }
     }
 
+    &__link_inner {
+        position: absolute;
+        top: 35%;
+    }
+
     &__link {
         display: flex;
         width: 123px;
@@ -353,11 +391,11 @@ body {
         align-items: center;
         border: 1px solid #ffffff;
         justify-content: center;
-        margin: 98px 0 0 0;
+        // margin: 98px 0 0 0;
 
         &:hover {
-            background: white;
-            color: #484848cf;
+            background: #f16d7faa;
+            box-shadow: 0 0 5px 0 #f16d7faa;
         }
     }
 
@@ -585,7 +623,7 @@ body {
         background-color: #e1e1e1;
         border-radius: 23px 0 0 23px;
         border: none;
-        padding: 0 0 0 28px;
+        padding: 0 15px 0 28px;
         flex-shrink: 3;
         box-sizing: border-box;
     }
