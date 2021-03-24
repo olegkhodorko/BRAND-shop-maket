@@ -20,7 +20,6 @@ body {
     padding: 0 14.37%;
 }
 
-
 .main {
     &__promotions {
         margin: 98px * 100% / $site-width 0 0 0;
@@ -34,6 +33,9 @@ body {
         margin: 113px * 100% / $site-width 0 0 0;
     }
 
+    &__subscription {
+        margin: 93px * 100% / $site-width 0 0 0;
+    }
 }
 .header {
     &__head {
@@ -382,8 +384,6 @@ body {
     display: flex;
     flex-wrap: wrap;
 
-
-
     &__image {
         position: relative;
         background-image: url(../images/offer/offer_image.jpg);
@@ -391,10 +391,7 @@ body {
         background-size: cover;
         flex-grow: 1;
         padding: 135px * 100% / $site-inner-width 0 298px * 100% / $site-inner-width 0;
-        
     }
-
-
 
     &__dark-layer {
         position: absolute;
@@ -405,7 +402,6 @@ body {
         &:hover {
             opacity: 0;
         }
-
     }
 
     &__text {
@@ -422,7 +418,7 @@ body {
 
     &__heading {
         font-size: 53px;
-        
+
         font-weight: 700;
         letter-spacing: 0.025em;
 
@@ -444,18 +440,12 @@ body {
     &__advantage {
         display: flex;
         padding: 0 0 62px * 100% / 373px 0;
-        
     }
-
-
 }
 .advantage {
-
-
     &__icon {
         padding: 0 30px 0 0;
         width: 45px;
-         
     }
 
     &__description {
@@ -472,23 +462,317 @@ body {
     }
 }
 
+.subscription {
+    display: flex;
+    background-image: url(../images/subscription/subscription-back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 22%;
 
-
-@media (max-width: 1024px) {
-    .offer__advantages {
-        max-width: 100%;
+    &__testimonials {
+        flex-basis: $site-width / 2;
+        padding: 111px * 100% / $site-inner-width 0 156px * 100% / $site-inner-width 0;
+        border-right: 1px solid #fff;
     }
 
-    .offer__advantage {
-        padding: 0 0 30px * 100% / 373px 0;
+    &__testimonial {
+    }
+
+    &__subscribe {
+        flex-basis: $site-width / 2;
+    }
+}
+
+.testimonial {
+    display: flex;
+
+    &__image {
+        padding: 0 28px 0 0;
+    }
+
+    &__photo {
+        width: 83px;
+        border-radius: 50%;
+    }
+
+    &__body {
+        flex-basis: 386px;
+        flex-shrink: 1;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: 0.025em;
+        color: #222224;
+    }
+
+    &__info {
+    }
+
+    &__author {
+        padding: 16px 0 0 0;
+        font-weight: 700;
+        color: $second_color;
+        text-transform: capitalize;
+    }
+
+    &__place {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 300;
+        color: #222224;
+    }
+}
+
+.testimonials {
+    &__carousel {
+        list-style-type: none;
+        margin: 41px 0 0 111px;
+    }
+}
+
+.carousel {
+    display: grid;
+    grid-template-columns: 38px 38px 38px;
+    gap: 13px;
+
+    &__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__item {
+        width: 38px;
+        height: 4px;
+        background-color: #d6d6d6;
+        &_active {
+            background-color: $second_color;
+        }
+    }
+}
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__heading {
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #222224;
+        text-transform: uppercase;
+        padding: 0 0 10px 0;
+    }
+
+    &__text {
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    &__form {
+        margin: 35px 0 0 0;
+    }
+}
+.subscribe-form {
+    display: flex;
+    &__input {
+        flex-basis: 282px;
+        height: 46px;
+        background-color: #e1e1e1;
+        border-radius: 23px 0 0 23px;
+        border: none;
+        padding: 0 0 0 28px;
+        flex-shrink: 3;
+        box-sizing: border-box;
+    }
+
+    &__button {
+        width: 104px;
+        height: 46px;
+        background-color: $second_color;
+        border: none;
+        border-radius: 0px 23px 23px 0px;
+        color: #fff;
+        flex-shrink: 0;
+
+        &:hover {
+            background-color: #fff;
+            color: $second_color;
+            border: 1px solid $second_color;
+            cursor: pointer;
+        }
+    }
+}
+
+.footer {
+    margin: 77px * 100% / $site-width 0 0 0;
+    &__top {
+        display: flex;
+        align-items: center;
+    }
+
+    &__info {
+        flex-basis: 427px;
+        margin: 32px 0 0 0;
+        padding: 0 4% 0 0;
+    }
+
+    &__p {
+        padding: 10px 0 10px 0;
+    }
+
+    &__menus {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-basis: 622px;
+        flex-shrink: 1;
+    }
+
+    &__menus-item {
+        padding: 0px 12px 0 12px;
+        margin: 32px 0 0 0;
+    }
+
+    &__heading {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        color: #f16d7f;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+    }
+
+    &__menu {
+    }
+
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 97px * 100% / $site-width 0 0 0;
+        height: 79px;
+        background-color: #e6e6e6;
+    }
+
+    &__rights {
+        font-size: 16px;
+        line-height: 42px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #7a7a7a;
+    }
+
+    &__icons {
+        display: flex;
+    }
+}
+.header {
+    &__logo {
+    }
+}
+.logo {
+    &__text {
+    }
+
+    &__last-letter {
+    }
+}
+.text {
+}
+.footer-menu {
+    list-style-type: none;
+
+    &__item {
+    }
+
+    &__link {
+        font-size: 16px;
+        padding: 10px 0 10px 0;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #898989;
+        display: inline-block;
+
+        &:hover {
+            color: $second_color;
+        }
+    }
+}
+.icons {
+    &__item {
+        width: 32px;
+        height: 32px;
+        background-color: #fff;
+        text-align: center;
+        margin: 0 0 0 8px;
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #b2b2b2;
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+
+        &:hover {
+            background-color: $second-color;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .offer {
+        &__advantages {
+            max-width: 100%;
+        }
+
+        &__advantage {
+            padding: 0 0 30px * 100% / 373px 0;
+        }
+    }
+
+    .footer {
+        &__info {
+            flex-basis: 100%;
+        }
+        &__top {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .subscription {
+        &__testimonials {
+            padding-right: 5%;
+        }
+
+        &__subscribe {
+            padding-left: 5%;
+        }
     }
 }
 
 @media (max-width: 768px) {
+    .container-inner {
+        padding: 0 5%;
+    }
+
     .promotions {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
-
 
     .featured {
         &__items {
@@ -496,5 +780,27 @@ body {
         }
     }
 
+    .subscription {
+        flex-wrap: wrap-reverse;
 
+        &__testimonials {
+            border-top: 1px solid #fff;
+            border-right: none;
+        }
+
+        &__subscribe {
+            padding: 111px * 100% / $site-inner-width 0 156px * 100% / $site-inner-width 0;
+        }
+    }
+
+    .subscription__testimonial {
+        justify-content: center;
+    }
+
+    .footer {
+        &__bottom {
+            justify-content: center;
+            padding: 0 0 10px 0;
+        }
+    }
 }
