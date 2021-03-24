@@ -14,6 +14,18 @@ body {
   padding: 0 14.37%;
 }
 
+.main__promotions {
+  margin: 6.125% 0 0 0;
+}
+
+.main__featured {
+  margin: 5.625% 0 0 0;
+}
+
+.main__offer {
+  margin: 7.0625% 0 0 0;
+}
+
 .header__head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,7 +246,6 @@ body {
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  margin: 6.125% 0 0 0;
 }
 
 .promotions__image {
@@ -291,7 +302,6 @@ body {
   font-weight: 700;
   letter-spacing: 0.025em;
   color: #222222;
-  margin: 6.25% 0 0 0;
 }
 
 .featured__items {
@@ -420,6 +430,107 @@ body {
   font-weight: 300;
   letter-spacing: 0.025em;
   color: #898989;
+}
+
+.offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.offer__image {
+  position: relative;
+  background-image: url(../images/offer/offer_image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 11.84211% 0 26.14035% 0;
+}
+
+.offer__dark-layer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+.offer__dark-layer:hover {
+  opacity: 0;
+}
+
+.offer__text {
+  font-size: 32.2px;
+  position: relative;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 0 0 0 39px;
+}
+
+.offer__text:hover ~ .offer__dark-layer {
+  opacity: 0;
+}
+
+.offer__heading {
+  font-size: 53px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+.offer__heading > span {
+  color: #f16d7f;
+}
+
+.offer__advantages {
+  max-width: 373px;
+  background-color: #222224;
+  padding: 4.82456% 3.77193% 0 3.15789%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.offer__advantage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0 16.62198% 0;
+}
+
+.advantage__icon {
+  padding: 0 30px 0 0;
+  width: 45px;
+}
+
+.advantage__heading {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #fbfbfb;
+  text-transform: capitalize;
+  padding: 0 0 12px 0;
+}
+
+@media (max-width: 1024px) {
+  .offer__advantages {
+    max-width: 100%;
+  }
+  .offer__advantage {
+    padding: 0 0 8.0429% 0;
+  }
 }
 
 @media (max-width: 768px) {
