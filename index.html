@@ -25,7 +25,58 @@
                     </a>
 
                     <form action="#" class="header__form search-form">
-                        <a class="search-form__browse-link" href="#">browse<span class="fa-caret-down"></span></a>
+                        <!-- <a class="search-form__browse-link" href="#">browse<span class="fa-caret-down"></span></a> -->
+                        <details class="search-form__browse-link">
+
+                            <summary class="search-form__summary">Browse<span class="fa-caret-down"></span></summary>
+
+                            <nav class="search-form__dropdown-menu dropdown-menu">
+
+                                <div class="dropdown-menu__item">
+                                    <h3 class="dropdown-menu__heading">Women</h3>
+                                    <ul>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Dressess</a></li>
+                                        <li class="dropdown-menu__list"><a href="#" class="dropdown-menu__link">Tops</a>
+                                        </li>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Sweaters/Knits</a></li>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Jackets/Coats</a></li>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Blazers</a></li>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Denim</a></li>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Leggings/Pants</a></li>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Skirts/Shorts</a></li>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Accessories</a></li>
+                                    </ul>
+
+                                </div>
+                                <div class="dropdown-menu__item">
+                                    <h3 class="dropdown-menu__heading">Men</h3>
+                                    <ul>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Tees/Tank tops</a></li>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Shirts/Polos</a></li>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Sweaters</a></li>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Sweatshirts/Hoodies</a></li>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Blazers</a></li>
+                                        <li class="dropdown-menu__list"><a href="#"
+                                                class="dropdown-menu__link">Jackets/vests</a></li>
+                                    </ul>
+
+                                </div>
+                            </nav>
+                        </details>
+
                         <input class="search-form__input" type="text" placeholder="Search for Item">
                         <button class="search-form__button"><span class="fa-search"></span></button>
                     </form>
@@ -33,23 +84,74 @@
 
 
                 <div class="header__right">
-                    <a href="#" class="header__basket"><img src="images/basket.png" alt="basket"></a>
+                    <!-- <a href="#" class="header__basket"><img src="images/basket.png" alt="basket"></a> -->
+                    <details class="header__basket cart-block">
+
+                        <summary><img src="images/basket.png" alt="cart"></summary>
+
+                        <div class="cart-block__container">
+
+                            <div class="cart-block__items">
+                                <div class="cart-block__item">
+                                    <a href="#" class="cart-block__group">
+                                        <img src="images/cart-items/cart_item_1.jpg" alt="rebox zane">
+                                        <div class="cart-block__description">
+                                            <h4 class="cart-block__heading">REbox zane</h4>
+                                            <p class="cart-block__stars"><span class="fa-star"></span><span
+                                                    class="fa-star"></span><span class="fa-star"></span><span
+                                                    class="fa-star"></span><span class="fa-star-half-o"></span></p>
+                                            <p class="cart-block__quantity">1 x $250</p>
+                                        </div>
+                                    </a>
+                                    <span class="fa-times-circle cart-block__delete"></span>
+                                </div>
+
+                                <div class="cart-block__item">
+                                    <a href="#" class="cart-block__group">
+                                        <img src="images/cart-items/cart_item_2.jpg" alt="rebox zane 2">
+                                        <div class="cart-block__description">
+                                            <h4 class="cart-block__heading">REbox zane</h4>
+                                            <p class="cart-block__stars"><span class="fa-star"></span><span
+                                                    class="fa-star"></span><span class="fa-star"></span><span
+                                                    class="fa-star"></span><span class="fa-star-half-o"></span></p>
+                                            <p class="cart-block__quantity">1 x $250</p>
+                                        </div>
+                                    </a>
+                                    <span class="fa-times-circle cart-block__delete"></span>
+                                </div>
+
+                                <div class="cart-block__total cart-total">
+                                    <p class="cart-total__text">total</p>
+                                    <p class="cart-total__value">$500.00</p>
+                                </div>
+
+                                <button class="cart-block__button cart-block__button_checkout">CHECKOUT</button>
+                                <button class="cart-block__button cart-block__button_go-to-cart">GO TO CART</button>
+
+                            </div>
+
+
+                        </div>
+                    </details>
                     <a href="#" class="header__button button">my account<span class="fa-caret-down"></span></a>
                 </div>
 
             </div>
+        </header>
 
-            <nav class="header__menu">
-                <ul class="menu">
-                    <li class="menu__item"><a href="#" class="menu__link">home</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">man</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">women</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">kids</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">accoseriese</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">featured</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">hot deals</a></li>
-                </ul>
-            </nav>
+
+
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item"><a href="#" class="menu__link">home</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">man</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">women</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">kids</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">accoseriese</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">featured</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">hot deals</a></li>
+            </ul>
+        </nav>
         </header>
 
         <div class="banner container-inner">
