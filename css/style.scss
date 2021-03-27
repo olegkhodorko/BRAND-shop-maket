@@ -422,12 +422,19 @@ input:focus-visible {
     display: flex;
     flex-wrap: wrap;
 
+
+
+
     &__image {
         position: relative;
         background-image: url(../images/offer/offer_image.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         flex-grow: 1;
+        &:hover .offer__dark-layer {
+            opacity: 0;
+            transition-duration: 300ms;
+        }
         padding: 135px * 100% / $site-inner-width 0 298px * 100% / $site-inner-width 0;
     }
 
@@ -436,10 +443,8 @@ input:focus-visible {
         height: 100%;
         width: 100%;
         top: 0;
+        transition-duration: 300ms;
 
-        &:hover {
-            opacity: 0;
-        }
     }
 
     &__text {
@@ -449,14 +454,11 @@ input:focus-visible {
         text-transform: uppercase;
         padding: 0 0 0 39px;
 
-        &:hover ~ .offer__dark-layer {
-            opacity: 0;
-        }
+
     }
 
     &__heading {
         font-size: 53px;
-
         font-weight: 700;
         letter-spacing: 0.025em;
 

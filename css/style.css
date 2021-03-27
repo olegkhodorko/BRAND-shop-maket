@@ -496,15 +496,19 @@ input:focus-visible {
   padding: 11.84211% 0 26.14035% 0;
 }
 
+.offer__image:hover .offer__dark-layer {
+  opacity: 0;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
 .offer__dark-layer {
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
-}
-
-.offer__dark-layer:hover {
-  opacity: 0;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
 }
 
 .offer__text {
@@ -513,10 +517,6 @@ input:focus-visible {
   color: #ffffff;
   text-transform: uppercase;
   padding: 0 0 0 39px;
-}
-
-.offer__text:hover ~ .offer__dark-layer {
-  opacity: 0;
 }
 
 .offer__heading {
