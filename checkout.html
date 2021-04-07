@@ -706,7 +706,7 @@
                                 <li class="shipping-address__advantages-item text">Easy access to your order history and
                                     status</li>
                             </ul>
-                            <button class="shipping-address__button" form="shipping-address__choice">CONTINUE</button>
+                            <input type="submit" form="shipping-address__choice-form" class="shipping-address__button" value="CONTINUE">
                         </div>
 
                         <div class="shipping-address__right">
@@ -715,16 +715,15 @@
 
                             <p class="text">Please log in below</p>
 
-                            <form action="" class="login-form shipping-address__login-form">
-                                <label class="login-form__label"><input type="email" class="login-form__input"
-                                        required><p>email address</p></spam></label>
-                                <label class="login-form__label"><input type="password" class="login-form__input"
+                            <form action="#" class="login-form shipping-address__login-form">
+                                <label class="login-form__label"><input name="email" type="email" class="login-form__input"
+                                        required><p>email address</p></label>
+                                <label class="login-form__label"><input name="password" type="password" class="login-form__input"
                                         required><p>password</p></label>
                                 <p class="login-form__required-text">* Required Fields</p>
                                 <div class="login-form__buttons">
-                                    <button type="submit" class="shipping-address__button login-form__button"
-                                        form="shipping-address__choice">LOG IN</button>
-                                    <a href="#" class="login-form__forgot">Forgot Password ?</a>
+                                        <input class="shipping-address__button login-form__button" type="submit" value="LOG&nbsp;IN">
+                                    <a href="#" class="login-form__forgot">Forgot&nbsp;Password&nbsp;?</a>
                                 </div>
                             </form>
 

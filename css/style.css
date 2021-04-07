@@ -1781,11 +1781,18 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 965px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .shipping-address__left {
-  -ms-flex-preferred-size: 280px;
-      flex-basis: 280px;
+  -ms-flex-preferred-size: 390px;
+      flex-basis: 390px;
+  padding: 0 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .shipping-address__heading {
@@ -1815,7 +1822,7 @@ select {
   margin-top: 35px;
   background-color: #ffffff;
   border: 1px solid #eaeaea;
-  padding: 20px 55px;
+  padding: 15px 55px;
   cursor: pointer;
 }
 
@@ -1827,6 +1834,12 @@ select {
 .shipping-address__right {
   -ms-flex-preferred-size: 390px;
       flex-basis: 390px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.shipping-address__login-form {
+  margin-top: 22px;
 }
 
 .choice-form {
@@ -1886,6 +1899,11 @@ select {
   font-weight: 400;
   color: #222222;
   text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.login-form__label > p {
+  margin-bottom: 10px;
 }
 
 .login-form__label > p::after {
@@ -1897,6 +1915,31 @@ select {
 
 .login-form__input {
   height: 45px;
+  border: 1px solid #eaeaea;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.login-form__required-text {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ff0d0d;
+  margin-top: 10px;
+}
+
+.login-form__forgot {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #222222;
+  padding: 15px 32px;
+  display: inline-block;
+}
+
+.login-form__forgot:hover {
+  color: #f16d7f;
 }
 
 .checkout-block__heading {
@@ -2109,6 +2152,22 @@ select {
 }
 
 @media (max-width: 768px) {
+  .shipping-address {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .shipping-address__left {
+    padding: 20px;
+    margin-bottom: 50px;
+    border: 1px solid #eaeaea;
+  }
+  .shipping-address__right {
+    padding: 20px;
+    border: 1px solid #eaeaea;
+  }
   .container-inner {
     padding-left: 5%;
     padding-right: 5%;

@@ -1574,8 +1574,13 @@ select {
 
 .shipping-address {
     display: flex;
+    max-width: 965px;
+    justify-content: space-between;
+
     &__left {
-        flex-basis: 280px;
+        flex-basis: 390px;
+        padding: 0 25px;
+        box-sizing: border-box;
     }
 
     &__heading {
@@ -1607,7 +1612,7 @@ select {
         margin-top: 35px;
         background-color: #ffffff;
         border: 1px solid #eaeaea;
-        padding: 20px 55px;
+        padding: 15px 55px;
         cursor: pointer;
 
         &:hover {
@@ -1617,9 +1622,11 @@ select {
 
     &__right {
         flex-basis: 390px;
+        box-sizing: border-box;
     }
 
     &__login-form {
+        margin-top: 22px;
     }
 }
 
@@ -1658,8 +1665,11 @@ select {
         font-weight: 400;
         color: #222222;
         text-transform: uppercase;
- 
+        margin-bottom: 10px;
 
+        & > p {
+            margin-bottom: 10px;
+        }
 
         & > p::after {
             content: "*";
@@ -1671,11 +1681,17 @@ select {
 
     &__input {
         height: 45px;
-
-
+        border: 1px solid #eaeaea;
+        padding: 0 15px;
+        box-sizing: border-box;
     }
 
     &__required-text {
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #ff0d0d;
+        margin-top: 10px;
     }
 
     &__buttons {
@@ -1685,6 +1701,16 @@ select {
     }
 
     &__forgot {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #222222;
+        padding: 15px 32px;
+        display: inline-block;
+
+        &:hover {
+            color: $second_color;
+        }
     }
 }
 
@@ -1888,6 +1914,22 @@ select {
 }
 
 @media (max-width: 768px) {
+
+    .shipping-address {
+        flex-wrap: wrap;
+        justify-content: center;
+        &__left {
+            padding: 20px;
+            margin-bottom: 50px;
+            border: 1px solid #eaeaea;
+        }
+
+        &__right {
+            padding: 20px;
+            border: 1px solid #eaeaea;
+        }
+    }
+
     .container-inner {
         padding-left: 5%;
         padding-right: 5%;
