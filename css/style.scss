@@ -27,6 +27,9 @@ input:focus-visible {
     outline: none;
 }
 
+select {
+    appearance: none!important;
+}
 .container {
     margin: auto;
     max-width: $site-width;
@@ -36,6 +39,8 @@ input:focus-visible {
     max-width: $site-inner-width;
     padding: 0 14.37%;
 }
+
+
 
 .main {
     &__promotions {
@@ -59,9 +64,17 @@ input:focus-visible {
 }
 
 .single-page {
-    &__item-desc   {
+    &__item-desc {
         margin-top: -100px;
         background-color: white;
+    }
+
+    &__featured {
+        margin: 90px * 100% / $site-width 0 0 0;
+    }
+
+    &__subscription {
+        margin: 93px * 100% / $site-width 0 0 0;
     }
 }
 
@@ -536,6 +549,10 @@ input:focus-visible {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 
+    & a {
+        display: block;
+    }
+
     &__image {
         width: 100%;
         display: block;
@@ -551,7 +568,7 @@ input:focus-visible {
         position: relative;
 
         &:hover {
-            box-shadow: 0 0 3px 0px rgb(87, 87, 87);
+            box-shadow: 0 0 5px 0px rgb(87, 87, 87);
             transition-duration: 200ms;
             transition-timing-function: linear;
         }
@@ -638,6 +655,7 @@ input:focus-visible {
     &__img {
         width: 100%;
         display: block;
+        height: 280px;
     }
 
     &__text {
@@ -875,13 +893,17 @@ input:focus-visible {
         display: block;
         width: 100%;
         height: 100%;
+        padding: 10px;
+
     }
 
     &__item {
         width: 38px;
         height: 4px;
         background-color: #d6d6d6;
-        &_active {
+
+        
+        &_active, &:hover {
             background-color: $second_color;
         }
     }
@@ -922,6 +944,7 @@ input:focus-visible {
         padding: 0 15px 0 28px;
         flex-shrink: 3;
         box-sizing: border-box;
+        min-width: 0;
     }
 
     &__button {
@@ -1062,6 +1085,7 @@ input:focus-visible {
         font-weight: 900;
         text-transform: uppercase;
         color: $second_color;
+        padding-right: 15px;
     }
 
     &__links {
@@ -1315,7 +1339,7 @@ input:focus-visible {
     align-items: center;
     border: 1px solid #eaeaea;
     margin: auto;
-    margin-top: -100px;
+    margin-top: -75px;
     max-width: 1140px;
     position: relative;
     z-index: 5;
@@ -1326,7 +1350,7 @@ input:focus-visible {
         height: 3px;
         background-color: $second_color;
         position: absolute;
-        top: 96px;
+        top: 33px;
     }
 
     &__wrapper {
@@ -1336,10 +1360,11 @@ input:focus-visible {
         justify-content: center;
         align-items: center;
         border-bottom: 1px solid #eaeaea;
+        padding: 73px * 100% / $site-inner-width 20px 38px * 100% / $site-inner-width 20px;
     }
 
     &__collection {
-        padding: 73px 0 0 0;
+        padding-bottom: 10px;
         border-bottom: 1px solid #eaeaea;
         display: flex;
         flex-direction: column;
@@ -1351,7 +1376,7 @@ input:focus-visible {
         font-size: 14px;
         line-height: 24px;
         font-weight: 700;
-        color: #f16d7f;
+        color: $second-color;
         text-transform: uppercase;
     }
 
@@ -1375,6 +1400,7 @@ input:focus-visible {
 
     &__parameters {
         display: flex;
+        flex-wrap: wrap;
         padding-top: 28px;
     }
 
@@ -1399,21 +1425,23 @@ input:focus-visible {
         font-size: 24px;
         line-height: 24px;
         font-weight: 700;
-        color: #ef5b70;
+        color: $second-color;
         padding-top: 30px;
-        padding-bottom: 38px;
     }
 
     &__form {
+        padding: 60px * 100% / $site-inner-width 20px 115px * 100% / $site-inner-width 20px;
     }
 }
 .to-cart-form {
-    padding-top: 60px;
-    padding-bottom: 115px;
+    width: 100%;
+    max-width: 540px;
+    box-sizing: border-box;
+
     &__fields-wrapper {
         display: flex;
         flex-wrap: wrap;
-        max-width: 540px;
+
         justify-content: space-between;
         padding-bottom: 25px;
     }
@@ -1428,6 +1456,11 @@ input:focus-visible {
     }
 
     &__select-wrapper {
+        margin: 0 10px 0 0;
+
+        &:last-of-type {
+            margin: 0;
+        }
     }
 
     &__field {
@@ -1447,15 +1480,29 @@ input:focus-visible {
         position: relative;
     }
 
-    &__color-select {
-        appearance: none;
-    }
+
 
     &__color-icon {
     }
 
-    &__size-select {
-        appearance: none;
+    &__color-select {
+        position: relative;
+        &:after {
+            content: "\f107";
+        }
+    }
+
+    &__select {
+        position: relative;
+        &:after {
+            content: "\f107";
+            top: 9px;
+            position: absolute;
+            right: 9px;
+            pointer-events: none;
+            font-size: 14px;
+            color: #bcbcbc;
+        }
     }
 
     &__quantity-input {
@@ -1473,7 +1520,7 @@ input:focus-visible {
     &__button {
         display: block;
         background-color: #ffffff;
-        border: 1px solid #ef5b70;
+        border: 1px solid $second-color;
         max-width: 540px;
         display: flex;
         align-items: center;
@@ -1482,26 +1529,24 @@ input:focus-visible {
         font-size: 16px;
         line-height: 1.2;
         font-weight: 700;
-        color: #ef5b70;
+        color: $second-color;
+        transition-duration: 200ms;
 
         & > img {
             padding: 13px;
+        }
+
+        &:hover {
+            box-shadow: 0 0 5px 0 $second-color;
+            transition-duration: 200ms;
         }
     }
 
     &__img-cart {
     }
 }
-.color-icon {
-    &_red {
-    }
 
-    &_green {
-    }
 
-    &_blue {
-    }
-}
 .quantity-input {
 }
 
@@ -1691,11 +1736,51 @@ input:focus-visible {
             padding-left: 5%;
         }
     }
+
+    .subscribe-form {
+        max-width: 280px;
+    }
+
+
+    .shopping-cart {
+        &__subscription {
+            padding-left: 7%;
+            padding-right: 7%;
+        }
+    }
 }
 
 @media (max-width: 768px) {
+    .container-inner {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .to-cart-form {
+        &__select-wrapper {
+            width: 100%;
+            padding-bottom: 20px;
+            margin: 0;
+        }
+
+        &__field {
+            width: 100%;
+        }
+    }
+
+    .item-desc {
+        margin-top: -55px;
+        &__parameters {
+            justify-content: center;
+        }
+
+        &__parameter {
+            padding: 0 20px !important;
+        }
+    }
+
     .cart-page__checkout-block > * {
-        flex-basis: 100%;
+        flex-basis: 100%; 
     }
 
     .cart-page {
