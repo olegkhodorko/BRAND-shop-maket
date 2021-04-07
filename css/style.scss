@@ -28,7 +28,7 @@ input:focus-visible {
 }
 
 select {
-    appearance: none!important;
+    appearance: none !important;
 }
 .container {
     margin: auto;
@@ -39,8 +39,6 @@ select {
     max-width: $site-inner-width;
     padding: 0 14.37%;
 }
-
-
 
 .main {
     &__promotions {
@@ -76,6 +74,11 @@ select {
     &__subscription {
         margin: 93px * 100% / $site-width 0 0 0;
     }
+}
+
+.checkout {
+    margin-bottom: 93px;
+    margin-top: 50px;
 }
 
 .header {
@@ -894,7 +897,6 @@ select {
         width: 100%;
         height: 100%;
         padding: 10px;
-
     }
 
     &__item {
@@ -902,8 +904,8 @@ select {
         height: 4px;
         background-color: #d6d6d6;
 
-        
-        &_active, &:hover {
+        &_active,
+        &:hover {
             background-color: $second_color;
         }
     }
@@ -1480,8 +1482,6 @@ select {
         position: relative;
     }
 
-
-
     &__color-icon {
     }
 
@@ -1546,8 +1546,146 @@ select {
     }
 }
 
+.checkout {
+    &__accordion {
+    }
+}
+.container-inner {
+}
 
-.quantity-input {
+.accordion {
+    &__item {
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    &__item-header {
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #222222;
+        padding: 33px 0;
+    }
+
+    &__content {
+        padding-bottom: 50px;
+    }
+}
+
+.shipping-address {
+    display: flex;
+    &__left {
+        flex-basis: 280px;
+    }
+
+    &__heading {
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #222222;
+        padding-bottom: 10px;
+    }
+
+    &__choice {
+        padding: 28px 0;
+    }
+
+    &__advantages {
+        padding-top: 28px;
+        list-style-type: none;
+    }
+
+    &__advantages-item {
+        &::before {
+            content: "\f101";
+            padding-right: 5px;
+        }
+    }
+
+    &__button {
+        margin-top: 35px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        padding: 20px 55px;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 0 5px 1px #eaeaea;
+        }
+    }
+
+    &__right {
+        flex-basis: 390px;
+    }
+
+    &__login-form {
+    }
+}
+
+.choice-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+
+    & > label {
+        display: flex;
+        align-items: center;
+        &:first-of-type {
+            padding-bottom: 16px;
+        }
+    }
+
+    & > label > input {
+        margin-right: 14px;
+    }
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #222222;
+        text-transform: uppercase;
+ 
+
+
+        & > p::after {
+            content: "*";
+            color: #ff0d0d;
+            padding-left: 5px;
+            font-size: 17px;
+        }
+    }
+
+    &__input {
+        height: 45px;
+
+
+    }
+
+    &__required-text {
+    }
+
+    &__buttons {
+    }
+
+    &__button {
+    }
+
+    &__forgot {
+    }
 }
 
 .checkout-block {
@@ -1741,7 +1879,6 @@ select {
         max-width: 280px;
     }
 
-
     .shopping-cart {
         &__subscription {
             padding-left: 7%;
@@ -1780,7 +1917,7 @@ select {
     }
 
     .cart-page__checkout-block > * {
-        flex-basis: 100%; 
+        flex-basis: 100%;
     }
 
     .cart-page {
