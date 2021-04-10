@@ -2088,6 +2088,36 @@ select {
   cursor: pointer;
 }
 
+.accordion-small__item {
+  margin-bottom: 18px;
+}
+
+.accordion-small__item-header {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #6f6e6e;
+  border-left: 5px solid #f16d7f;
+  border-bottom: 1px solid #ebebeb;
+  padding: 10px 16px;
+}
+
+.accordion-small__item-header_active {
+  color: #f16d7f;
+}
+
+.accordion-small__content {
+  padding: 13px 20px;
+}
+
+.dropdown-menu__link {
+  font-size: 14px;
+  line-height: 33px;
+  font-weight: 400;
+  color: #6f6e6e;
+}
+
 @media (max-width: 1024px) {
   .header__head {
     -webkit-box-pack: center;
