@@ -23,7 +23,7 @@ summary {
     }
 }
 
-input:focus-visible {
+input:focus-visible, details > summary:focus, button:focus {
     outline: none;
 }
 
@@ -1550,8 +1550,6 @@ select {
     &__accordion {
     }
 }
-.container-inner {
-}
 
 .accordion {
     &__item {
@@ -1843,15 +1841,21 @@ select {
     }
 }
 
-.product {
-    &__accordion {
-    }
-}
-
 .accordion-small {
     &__item {
         margin-bottom: 18px;
 
+        & > summary {
+            &::after {
+                content: "\f0d7";
+            }
+        }
+
+        &[open] > summary {
+            &::after {
+                content: "\f0d8";
+            }
+        }
     }
 
     &__item-header {
@@ -1863,8 +1867,8 @@ select {
         border-left: 5px solid $second_color;
         border-bottom: 1px solid #ebebeb;
         padding: 10px 16px;
-        
-
+        display: flex;
+        justify-content: space-between;
 
         &_active {
             color: $second_color;
@@ -1885,6 +1889,204 @@ select {
         line-height: 33px;
         font-weight: 400;
         color: #6f6e6e;
+    }
+}
+
+.product {
+    display: flex;
+    margin: 60px * 100% / $site-width 0;
+
+    &__left {
+        flex-basis: 240px;
+        flex-shrink: 0;
+        margin-right: 50px;
+    }
+
+    &__accordion {
+    }
+
+    &__right {
+        width: 100%;
+    }
+
+    &__filter {
+    }
+
+    &__sort {
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__pagination {
+    }
+
+    &__view-all-button {
+    }
+
+    &__pagination {
+    }
+}
+.container-inner {
+}
+
+.accordion-small {
+    &__item {
+    }
+
+    &__item-header {
+        &_active {
+        }
+    }
+
+    &__content {
+    }
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+
+    &__trending {
+    }
+
+    &__heading {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #6f6e6e;
+        padding-bottom: 20px;
+    }
+
+    &__price-value {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 400;
+        color: #6f6e6e;
+    }
+
+    &__trending-items {
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 400;
+
+        & > a {
+            border-right: 1px solid #dfdfdf;
+            padding: 0 15px;
+            color: #6f6e6e;
+
+            &:first-of-type {
+                padding-left: 0;
+            }
+
+            &:last-of-type {
+                border: none;
+                padding-right: 0;
+            }
+
+            &:hover {
+                color: $second_color;
+            }
+        }
+    }
+
+    &__size {
+    }
+
+    &__size-form {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 280px;
+
+        & > label {
+            width: 50px;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #6f6e6e;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        & > label > input {
+            margin-right: 8px;
+        }
+    }
+
+    &__price > input {
+
+        width: 250px;
+        background: $second_color;
+    }
+}
+.sort {
+    display: flex;
+    &__name {
+    }
+
+    &__show {
+    }
+}
+
+.colored-border-button {
+    color: $second_color;
+    width: 150px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $second_color;
+    border-radius: 3px;
+    font-size: 16px;
+    box-sizing: border-box;
+
+    &:hover {
+        background-color: $second-color;
+        color: white;
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    box-sizing: border-box;
+    max-width: 262px;
+
+    &__arrow {
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 700;
+        color: #aaaaaa;
+        padding: 8px 12px;
+
+        &_active {
+            color: $second_color;
+        }
+    }
+
+    &__numeration {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 700;
+        color: #c4c4c4;
+        padding: 8px 7px;
+
+        &_active {
+            color: $second_color;
+        }
+
+        &:hover {
+            color: $second_color;
+        }
     }
 }
 

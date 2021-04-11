@@ -18,7 +18,7 @@ summary > span {
   padding: 0 0 0 2px;
 }
 
-input:focus-visible {
+input:focus-visible, details > summary:focus, button:focus {
   outline: none;
 }
 
@@ -2092,6 +2092,14 @@ select {
   margin-bottom: 18px;
 }
 
+.accordion-small__item > summary::after {
+  content: "\f0d7";
+}
+
+.accordion-small__item[open] > summary::after {
+  content: "\f0d8";
+}
+
 .accordion-small__item-header {
   font-size: 14px;
   line-height: 20px;
@@ -2101,6 +2109,12 @@ select {
   border-left: 5px solid #f16d7f;
   border-bottom: 1px solid #ebebeb;
   padding: 10px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .accordion-small__item-header_active {
@@ -2116,6 +2130,197 @@ select {
   line-height: 33px;
   font-weight: 400;
   color: #6f6e6e;
+}
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3.75% 0;
+}
+
+.product__left {
+  -ms-flex-preferred-size: 240px;
+      flex-basis: 240px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 50px;
+}
+
+.product__right {
+  width: 100%;
+}
+
+.product__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filter__heading {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #6f6e6e;
+  padding-bottom: 20px;
+}
+
+.filter__price-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #6f6e6e;
+}
+
+.filter__trending-items {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.filter__trending-items > a {
+  border-right: 1px solid #dfdfdf;
+  padding: 0 15px;
+  color: #6f6e6e;
+}
+
+.filter__trending-items > a:first-of-type {
+  padding-left: 0;
+}
+
+.filter__trending-items > a:last-of-type {
+  border: none;
+  padding-right: 0;
+}
+
+.filter__trending-items > a:hover {
+  color: #f16d7f;
+}
+
+.filter__size-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 280px;
+}
+
+.filter__size-form > label {
+  width: 50px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #6f6e6e;
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter__size-form > label > input {
+  margin-right: 8px;
+}
+
+.filter__price > input {
+  width: 250px;
+  background: #f16d7f;
+}
+
+.sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.colored-border-button {
+  color: #f16d7f;
+  width: 150px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #f16d7f;
+  border-radius: 3px;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.colored-border-button:hover {
+  background-color: #f16d7f;
+  color: white;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 262px;
+}
+
+.pagination__arrow {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #aaaaaa;
+  padding: 8px 12px;
+}
+
+.pagination__arrow_active {
+  color: #f16d7f;
+}
+
+.pagination__numeration {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #c4c4c4;
+  padding: 8px 7px;
+}
+
+.pagination__numeration_active {
+  color: #f16d7f;
+}
+
+.pagination__numeration:hover {
+  color: #f16d7f;
 }
 
 @media (max-width: 1024px) {
