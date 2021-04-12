@@ -6,7 +6,7 @@ $site-width: 1600px;
 $site-inner-width: 1140px;
 
 @function adaptive-exsize($n) {
-    @return  $n * 100% / $site-width;
+    @return $n * 100% / $site-width;
 }
 
 @function adaptive-insize($n) {
@@ -14,7 +14,6 @@ $site-inner-width: 1140px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-
 
 body {
     font-family: Lato, AdobeInvisFont, MyriadPro-Regular, FontAwesome;
@@ -1910,9 +1909,9 @@ select {
     margin: adaptive-exsize(60px) 0;
 
     &__left {
-        flex-basis: 240px;
+        flex-basis: adaptive-insize(236px);
         flex-shrink: 0;
-        margin-right: 50px;
+        margin-right: adaptive-insize(48px);
     }
 
     &__sort {
@@ -2015,6 +2014,7 @@ select {
     }
 
     &__size {
+        padding: 0 20px;
     }
 
     &__size-form {
@@ -2041,7 +2041,14 @@ select {
 
     &__price > input {
         width: 250px;
+        width: 100%;
         background: $second_color;
+    }
+
+    &__price {
+        max-width: 250px;
+        width: 100%;
+        flex-shrink: 2.5;
     }
 }
 .sort {
@@ -2145,8 +2152,6 @@ select {
     }
 }
 
-
-
 .advantages {
     background-color: #222224;
 
@@ -2234,6 +2239,63 @@ select {
             justify-content: center;
         }
     }
+
+    .featured {
+        &__items {
+            justify-content: center;
+        }
+    }
+
+    .filter {
+        flex-wrap: wrap;
+
+        & > div:not(:last-of-type) {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & > div:last-of-type {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__trending {
+        }
+
+        &__trending-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            & > p:last-of-type > a:first-of-type {
+                padding-left: 15px;
+            }
+
+            & > p:first-of-type > a:last-of-type {
+                padding-right: 15px;
+                border-right: 1px solid #dfdfdf;
+            }
+        }
+
+        &__size {
+            padding: 30px 0;
+        }
+
+        &__size-form {
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
@@ -2260,6 +2322,12 @@ select {
 }
 
 @media (max-width: 768px) {
+    .advantages {
+        &__items {
+            flex-wrap: wrap;
+        }
+    }
+
     .shipping-address {
         flex-wrap: wrap;
         justify-content: center;
@@ -2426,5 +2494,37 @@ select {
             font-weight: bold;
             display: none;
         }
+    }
+
+    .sort {
+        &__field > div > select {
+
+            padding-right: 20px;
+
+        }
+    }
+
+    .product {
+        flex-wrap: wrap;
+
+        &__left {
+            flex-basis: 100%;
+        }
+
+        &__bottom {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            & > * {
+                width: 100%;
+            }
+        }
+
+        &__view-all-button {
+            margin-top: 20px;
+        }
+    }
+
+    .product {
     }
 }
