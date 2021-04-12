@@ -5,7 +5,16 @@ $second_color: #f16d7f;
 $site-width: 1600px;
 $site-inner-width: 1140px;
 
+@function adaptive-exsize($n) {
+    @return  $n * 100% / $site-width;
+}
+
+@function adaptive-insize($n) {
+    @return $n * 100% / $site-inner-width;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 
 body {
     font-family: Lato, AdobeInvisFont, MyriadPro-Regular, FontAwesome;
@@ -23,13 +32,16 @@ summary {
     }
 }
 
-input:focus-visible, details > summary:focus, button:focus {
+input:focus-visible,
+details > summary:focus,
+button:focus {
     outline: none;
 }
 
 select {
     appearance: none !important;
 }
+
 .container {
     margin: auto;
     max-width: $site-width;
@@ -42,19 +54,19 @@ select {
 
 .main {
     &__promotions {
-        margin: 98px * 100% / $site-width 0 0 0;
+        margin: adaptive-exsize(98px) 0 0 0;
     }
 
     &__featured {
-        margin: 90px * 100% / $site-width 0 0 0;
+        margin: adaptive-exsize(98px) 0 0 0;
     }
 
     &__offer {
-        margin: 113px * 100% / $site-width 0 0 0;
+        margin: adaptive-exsize(98px) 0 0 0;
     }
 
     &__subscription {
-        margin: 93px * 100% / $site-width 0 0 0;
+        margin: adaptive-exsize(98px) 0 0 0;
     }
 
     &__breadcrumbs {
@@ -68,11 +80,11 @@ select {
     }
 
     &__featured {
-        margin: 90px * 100% / $site-width 0 0 0;
+        margin: adaptive-exsize(90px) 0 0 0;
     }
 
     &__subscription {
-        margin: 93px * 100% / $site-width 0 0 0;
+        margin: adaptive-exsize(90px) 0 0 0;
     }
 }
 
@@ -627,7 +639,7 @@ select {
         grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
         gap: 26px;
         justify-content: space-between;
-        margin: 60px * 100% / $site-width 0 0 0;
+        margin: adaptive-exsize(60px) 0 0 0;
     }
 
     &__item {
@@ -731,7 +743,7 @@ select {
 
     &__button {
         padding: 13px 20px 13px 24px;
-        margin: 49px * 100% / $site-width 0 0 0;
+        margin: adaptive-exsize(60px) 0 0 0;
         text-align: center;
     }
 }
@@ -760,7 +772,7 @@ select {
             transition-duration: 300ms;
         }
 
-        padding: 135px * 100% / $site-inner-width 0 298px * 100% / $site-inner-width 0;
+        padding: adaptive-insize(135px) 0 adaptive-insize(298px) 0;
     }
 
     &__dark-layer {
@@ -792,7 +804,7 @@ select {
     &__advantages {
         max-width: 373px;
         background-color: #222224;
-        padding: 55px * 100% / $site-inner-width 43px * 100% / $site-inner-width 0 36px * 100% / $site-inner-width;
+        padding: adaptive-insize(55px) adaptive-insize(43px) 0 adaptive-insize(36px);
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -830,7 +842,7 @@ select {
 
     &__testimonials {
         flex-basis: $site-width / 2;
-        padding: 111px * 100% / $site-inner-width 0 156px * 100% / $site-inner-width 0;
+        padding: adaptive-insize(111px) 0 adaptive-insize(156px) 0;
         border-right: 1px solid #fff;
     }
 
@@ -968,7 +980,7 @@ select {
 }
 
 .footer {
-    margin: 77px * 100% / $site-width 0 0 0;
+    margin: adaptive-exsize(77px) 0 0 0;
     &__top {
         display: flex;
         align-items: center;
@@ -1012,7 +1024,7 @@ select {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        margin: 97px * 100% / $site-width 0 0 0;
+        margin: adaptive-exsize(97px) 0 0 0;
         height: 79px;
         background-color: #e6e6e6;
     }
@@ -1078,8 +1090,8 @@ select {
     justify-content: space-between;
     align-items: center;
     background-color: #f8f3f4;
-    padding-top: 65px * 100% / $site-width;
-    padding-bottom: 65px * 100% / $site-width;
+    padding-top: adaptive-exsize(65px);
+    padding-bottom: adaptive-exsize(65px);
 
     &__heading {
         font-size: 24px;
@@ -1117,7 +1129,7 @@ select {
 
 .shopping-cart {
     &__subscription {
-        margin: 73px * 100% / $site-width 0 0 0;
+        margin: adaptive-exsize(73px) 0 0 0;
     }
 }
 
@@ -1129,7 +1141,7 @@ select {
     }
 
     &__adaptive-table {
-        margin: 90px * 100% / $site-inner-width 0 0 0;
+        margin: adaptive-insize(90px) 0 0 0;
     }
 
     &__quantity-input {
@@ -1362,7 +1374,7 @@ select {
         justify-content: center;
         align-items: center;
         border-bottom: 1px solid #eaeaea;
-        padding: 73px * 100% / $site-inner-width 20px 38px * 100% / $site-inner-width 20px;
+        padding: adaptive-insize(73px) 20px adaptive-insize(38px) 20px;
     }
 
     &__collection {
@@ -1432,7 +1444,7 @@ select {
     }
 
     &__form {
-        padding: 60px * 100% / $site-inner-width 20px 115px * 100% / $site-inner-width 20px;
+        padding: adaptive-insize(60px) 20px adaptive-insize(115px) 20px;
     }
 }
 .to-cart-form {
@@ -1838,6 +1850,7 @@ select {
         top: 20px;
         right: 12px;
         cursor: pointer;
+        pointer-events: none;
     }
 }
 
@@ -1894,12 +1907,16 @@ select {
 
 .product {
     display: flex;
-    margin: 60px * 100% / $site-width 0;
+    margin: adaptive-exsize(60px) 0;
 
     &__left {
         flex-basis: 240px;
         flex-shrink: 0;
         margin-right: 50px;
+    }
+
+    &__sort {
+        margin-top: 40px;
     }
 
     &__accordion {
@@ -1918,6 +1935,7 @@ select {
     &__bottom {
         display: flex;
         justify-content: space-between;
+        margin-top: adaptive-insize(45px);
     }
 
     &__pagination {
@@ -1929,6 +1947,7 @@ select {
     &__pagination {
     }
 }
+
 .container-inner {
 }
 
@@ -2021,13 +2040,49 @@ select {
     }
 
     &__price > input {
-
         width: 250px;
         background: $second_color;
     }
 }
 .sort {
     display: flex;
+    background-color: #f3f3f3;
+
+    &__select-wrapper {
+        display: inline-block;
+        border-left: 1px solid #ebebeb;
+        margin-left: 10px;
+        position: relative;
+
+        &::after {
+            content: "\f0d7";
+            position: absolute;
+            right: 10px;
+            pointer-events: none;
+        }
+    }
+
+    &__select {
+    }
+
+    &__field {
+        margin: 10px;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 400;
+        color: #6f6e6e;
+        background-color: #ffffff;
+        border: 1px solid #ebebeb;
+        padding: 0 0 0 13px;
+
+        & > div > select {
+            border: none;
+            padding-right: 40px;
+            padding-left: 10px;
+            cursor: pointer;
+        }
+    }
+
     &__name {
     }
 
@@ -2087,6 +2142,50 @@ select {
         &:hover {
             color: $second_color;
         }
+    }
+}
+
+
+
+.advantages {
+    background-color: #222224;
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: adaptive-insize(90px) 0;
+        padding: 0 20px;
+    }
+
+    &__icon {
+        margin-bottom: 30px;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & > p {
+            text-align: center;
+        }
+    }
+
+    &__heading {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        color: #fbfbfb;
+        text-transform: capitalize;
+        margin-bottom: 15px;
     }
 }
 
@@ -2277,7 +2376,7 @@ select {
         }
 
         &__subscribe {
-            padding: 111px * 100% / $site-inner-width 0 156px * 100% / $site-inner-width 0;
+            padding: adaptive-insize(111px) 0 adaptive-insize(156px) 0;
         }
     }
 
