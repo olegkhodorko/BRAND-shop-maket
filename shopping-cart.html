@@ -87,7 +87,7 @@
                     <details class="header__basket cart-block">
 
                         <summary><img src="images/basket.png" alt="cart">
-                            <div class="cart-block__label">2</div>
+                            <span class="cart-block__label">2</span>
                         </summary>
 
 
@@ -132,7 +132,7 @@
                                 <form action="/shopping-cart.html">
                                     <button class="cart-block__button cart-block__button_go-to-cart">GO TO CART</button>
                                 </form>
-                                
+
 
                             </div>
 
@@ -985,17 +985,15 @@
         <div class="subscription shopping-cart__subscription container-inner">
             <div class="subscription__testimonials testimonisls">
                 <figure class="subscription__testimonial testimonial">
-                    <div class="testimonial__image"><img src="images/subscription/testimonial_photo.jpg" alt="photo"
-                            class="testimonial__photo"></div>
-                    <div class="testimonial__body">
+                    <img class="testimonial__image testimonial__photo" src="images/subscription/testimonial_photo.jpg" alt="photo">
+                    <figcaption class="testimonial__body">
                         <p class="testimonial__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
                             a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
-                        <figcaption class="testimonial__info">
+                        <div class="testimonial__info">
                             <p class="testimonial__author">bin burhan</p>
                             <p class="testimonial__place">Dhaka, Bd</p>
-                        </figcaption>
-                    </div>
-
+                        </div>
+                    </figcaption>
                 </figure>
 
                 <ul class="testimonials__carousel carousel">
@@ -1007,16 +1005,13 @@
 
 
             <div class="subscription__subscribe subscribe">
-
                 <h3 class="subscribe__heading">subscribe</h3>
                 <p class="subscribe__text">
                     for our newletter and promotion
                 </p>
-                <form action="" class="subscribe__form subscribe-form"><input placeholder="Enter Your Email"
+                <form action="#" class="subscribe__form subscribe-form"><input placeholder="Enter Your Email"
                         type="email" class="subscribe-form__input"><button
                         class="subscribe-form__button">Subscribe</button></form>
-
-
             </div>
         </div>
         <footer class="footer">

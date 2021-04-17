@@ -1,17 +1,6 @@
 /*styles*/
 
-$second_color: #f16d7f;
-
-$site-width: 1600px;
-$site-inner-width: 1140px;
-
-@function adaptive-exsize($n) {
-    @return $n * 100% / $site-width;
-}
-
-@function adaptive-insize($n) {
-    @return $n * 100% / $site-inner-width;
-}
+@import "vars";
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
@@ -21,19 +10,18 @@ body {
 
 summary {
     display: block;
-    cursor: pointer;
+    cursor: pointer; 
     -webkit-details-marker {
         display: none;
     }
     & > span {
         color: #838383;
-        padding: 0 0 0 2px;
     }
 }
 
 input:focus-visible,
 details > summary:focus,
-button:focus {
+button:focus, select:focus {
     outline: none;
 }
 
@@ -134,6 +122,11 @@ select {
 .cart-block {
     position: relative;
 
+    &[open] > .cart-block__container {
+        animation: menu-animation 0.5s ease-out both;
+        z-index: 111;
+    }
+
     &__container {
         width: 262px;
         position: absolute;
@@ -143,7 +136,7 @@ select {
         padding: 4px 15px 21px 15px;
         border-radius: 5px;
         border: 1px solid #e8e8e8;
-        z-index: 11;
+        z-index: 111;
 
         &::before {
             content: "";
@@ -160,6 +153,7 @@ select {
     }
 
     &__label {
+        display: block;
         background-color: $second_color;
         position: absolute;
         top: -9px;
@@ -220,6 +214,7 @@ select {
         align-items: center;
         height: 100%;
         padding: 0px 15px 0 0;
+        transition: box-shadow 200ms linear;
 
         &:hover {
             box-shadow: 0 0 5px 0 #0003;
@@ -243,6 +238,7 @@ select {
         color: #c0c0c0;
         cursor: pointer;
         padding: 7px 0 7px 7px;
+        transition: color 200ms linear;
 
         &:hover {
             color: #000;
@@ -267,11 +263,11 @@ select {
             border: 1px solid $second_color;
             color: $second-color;
             margin: 0 0 11px 0;
+            transition: color,background 200ms linear;
 
             &:hover {
                 background: $second_color;
                 color: #fff;
-                transition-duration: 300ms;
             }
         }
 
@@ -283,6 +279,7 @@ select {
             text-transform: uppercase;
             color: #4a4a4a;
             border: 1px solid #eaeaea;
+            transition: box-shadow 200ms linear;
 
             &:hover {
                 box-shadow: 0 0 4px 0 #4a4a4a8f;
@@ -370,6 +367,10 @@ select {
             color: #838383;
             padding: 0 0 0 2px;
         }
+
+        &[open] > .dropdown-menu{
+            animation: menu-animation 0.5s ease-out both;
+        }
     }
 
     &__input {
@@ -440,6 +441,7 @@ select {
         color: #4f4f4f;
         display: inline-block;
         width: 100%;
+        transition: box-shadow 200ms linear;
 
         &:hover {
             color: $second_color;
@@ -454,7 +456,7 @@ select {
     letter-spacing: 0.025em;
     color: #ffffff;
     text-transform: capitalize;
-
+    transition: color,background 200ms linear;
     & > span {
         padding: 0 0 0 8px;
     }
@@ -475,6 +477,8 @@ select {
     &__sub-menu {
         display: none;
         top: 45px;
+        animation: menu-animation 0.5s ease-out both;
+
 
         &_right {
             right: 0;
@@ -497,6 +501,7 @@ select {
 
     &__item {
         position: relative;
+        
 
         &:hover .menu__sub-menu {
             display: flex;
@@ -511,6 +516,7 @@ select {
         text-transform: uppercase;
         color: #222222;
         padding: 18px 22px;
+        transition: color 200ms linear;
 
         &:hover {
             color: $second_color;
@@ -520,6 +526,10 @@ select {
             color: $second_color;
         }
     }
+}
+
+.swing-in-top-fwd {
+	
 }
 
 .banner {
@@ -565,6 +575,11 @@ select {
 
     & a {
         display: block;
+        transition: box-shadow, transform 200ms linear;
+        &:hover {
+            box-shadow: 0 0 5px 0px rgb(87, 87, 87);
+            transform: translateY(-10px);
+        }
     }
 
     &__image {
@@ -581,11 +596,8 @@ select {
         width: 100%;
         position: relative;
 
-        &:hover {
-            box-shadow: 0 0 5px 0px rgb(87, 87, 87);
-            transition-duration: 200ms;
-            transition-timing-function: linear;
-        }
+
+
     }
 
     &__text {
@@ -643,13 +655,12 @@ select {
 
     &__item {
         position: relative;
-        transition-timing-function: linear;
-        transition-duration: 200ms;
+        transition: box-shadow 200ms linear, transform 200ms linear;
         text-align-last: left;
+
         &:hover {
             box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
-            transition-duration: 200ms;
-            transition-timing-function: linear;
+            transform: translateY(-10px);
         }
 
         &:hover .featured__stars {
@@ -681,6 +692,7 @@ select {
         padding: 19px 0 12px 15px;
         display: inline-block;
         text-align: left;
+        transition: color 200ms linear;
 
         &:hover {
             color: $second_color;
@@ -704,13 +716,10 @@ select {
         background: #484848cf;
         display: flex;
         justify-content: center;
-        transition-duration: 300ms;
-        transition-timing-function: linear;
+        transition: opacity 300ms linear;
 
         &:hover {
             opacity: 1;
-            transition-duration: 300ms;
-            transition-timing-function: linear;
         }
     }
 
@@ -730,6 +739,7 @@ select {
         align-items: center;
         border: 1px solid #ffffff;
         justify-content: center;
+        transition: box-shadow 200ms linear;
 
         &:hover {
             box-shadow: 0 0 5px 0 white;
@@ -768,7 +778,6 @@ select {
 
         &:hover .offer__dark-layer {
             opacity: 0;
-            transition-duration: 300ms;
         }
 
         padding: adaptive-insize(135px) 0 adaptive-insize(298px) 0;
@@ -779,7 +788,7 @@ select {
         height: 100%;
         width: 100%;
         top: 0;
-        transition-duration: 300ms;
+        transition: opacity 1000ms linear;
     }
 
     &__text {
@@ -853,13 +862,12 @@ select {
 .testimonial {
     display: flex;
 
-    &__image {
-        padding: 0 28px 0 0;
-    }
-
     &__photo {
         width: 83px;
+        height: 83px;
         border-radius: 50%;
+        margin: 0 28px 0 0;
+        display: block;
     }
 
     &__body {
@@ -914,6 +922,7 @@ select {
         width: 38px;
         height: 4px;
         background-color: #d6d6d6;
+        transition: background-color 200ms linear;
 
         &_active,
         &:hover {
@@ -968,6 +977,8 @@ select {
         border-radius: 0px 23px 23px 0px;
         color: #fff;
         flex-shrink: 0;
+        transition-property: background-color, color, border;
+        transition-duration: 300ms;
 
         &:hover {
             background-color: #fff;
@@ -1051,6 +1062,7 @@ select {
         letter-spacing: 0.025em;
         color: #898989;
         display: block;
+        transition: color 200ms linear;
 
         &:hover {
             color: $second_color;
@@ -1076,6 +1088,10 @@ select {
         width: 32px;
         height: 32px;
         display: inline-block;
+        transition-property: color, background-color;
+        transition-duration: 200ms;
+        transition-timing-function: linear;
+        
 
         &:hover {
             background-color: $second-color;
@@ -1114,6 +1130,7 @@ select {
         font-weight: 300;
         text-transform: uppercase;
         color: #636363;
+        transition: color 200ms linear;
 
         &:hover {
             color: $second_color;
@@ -1213,26 +1230,28 @@ select {
 
     &__arrow_left {
         left: 0;
-        transition-duration: 300ms;
+        transition-duration: all 300ms;
 
-        &:hover {
-            justify-content: flex-start;
-            padding-left: 10px;
-            box-sizing: border-box;
-            transition-duration: 300ms;
-        }
+        & > span {
+            transition: transform 200ms linear; 
+         }
+ 
+         &:hover > span {
+             transform: translateX(-10px);
+         }
     }
 
     &__arrow_right {
         right: 0;
+        transition-duration: all 300ms;
+        
+        & > span {
+           transition: transform 200ms linear; 
+        }
 
-        transition-duration: 300ms;
 
-        &:hover {
-            justify-content: flex-end;
-            padding-right: 10px;
-
-            transition-duration: 300ms;
+        &:hover > span {
+            transform: translateX(10px);
         }
     }
 }
@@ -1330,6 +1349,7 @@ select {
     background-color: #fff;
     border: 1px solid #eaeaea;
     cursor: pointer;
+    transition: box-shadow 200ms linear;
 
     &:hover {
         box-shadow: 0 0 5px 0 #57575755;
@@ -1493,9 +1513,6 @@ select {
         position: relative;
     }
 
-    &__color-icon {
-    }
-
     &__color-select {
         position: relative;
         &:after {
@@ -1541,7 +1558,7 @@ select {
         line-height: 1.2;
         font-weight: 700;
         color: $second-color;
-        transition-duration: 200ms;
+        transition: box-shadow 200ms linear;
 
         & > img {
             padding: 13px;
@@ -1549,7 +1566,6 @@ select {
 
         &:hover {
             box-shadow: 0 0 5px 0 $second-color;
-            transition-duration: 200ms;
         }
     }
 
@@ -1565,6 +1581,10 @@ select {
 .accordion {
     &__item {
         border-bottom: 1px solid #e8e8e8;
+
+        &[open] > .accordion__content {
+            animation: menu-animation 0.5s ease-out both;
+        }
     }
 
     &__item-header {
@@ -1623,6 +1643,7 @@ select {
         border: 1px solid #eaeaea;
         padding: 15px 55px;
         cursor: pointer;
+        transition: box-shadow 200ms linear;
 
         &:hover {
             box-shadow: 0 0 5px 1px #eaeaea;
@@ -1676,7 +1697,7 @@ select {
         text-transform: uppercase;
         margin-bottom: 10px;
 
-        & > p {
+        & > span {
             margin-bottom: 10px;
         }
 
@@ -1716,6 +1737,7 @@ select {
         color: #222222;
         padding: 15px 32px;
         display: inline-block;
+        transition: color 200ms linear;
 
         &:hover {
             color: $second_color;
@@ -1854,8 +1876,14 @@ select {
 }
 
 .accordion-small {
+    
     &__item {
         margin-bottom: 18px;
+        animation: menu-animation 0.5s ease-out both;
+
+        &[open] > .accordion-small__content {
+            animation: menu-animation 0.5s ease-out both;
+        }
 
         & > summary {
             &::after {
@@ -1868,7 +1896,11 @@ select {
                 content: "\f0d8";
             }
         }
+
+
     }
+
+
 
     &__item-header {
         font-size: 14px;
@@ -1947,21 +1979,6 @@ select {
     }
 }
 
-.container-inner {
-}
-
-.accordion-small {
-    &__item {
-    }
-
-    &__item-header {
-        &_active {
-        }
-    }
-
-    &__content {
-    }
-}
 
 .filter {
     display: flex;
@@ -1997,6 +2014,7 @@ select {
             border-right: 1px solid #dfdfdf;
             padding: 0 15px;
             color: #6f6e6e;
+            transition: color 200ms linear;
 
             &:first-of-type {
                 padding-left: 0;
@@ -2108,6 +2126,7 @@ select {
     border-radius: 3px;
     font-size: 16px;
     box-sizing: border-box;
+    transition: color 200ms linear, background-color 200ms linear;
 
     &:hover {
         background-color: $second-color;
@@ -2141,6 +2160,7 @@ select {
         font-weight: 700;
         color: #c4c4c4;
         padding: 8px 7px;
+        transition: color 200ms linear;
 
         &_active {
             color: $second_color;

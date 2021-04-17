@@ -1,5 +1,38 @@
 /*styles*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@-webkit-keyframes menu-animation {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes menu-animation {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+
 body {
   font-family: Lato, AdobeInvisFont, MyriadPro-Regular, FontAwesome;
 }
@@ -15,12 +48,11 @@ summary -webkit-details-marker {
 
 summary > span {
   color: #838383;
-  padding: 0 0 0 2px;
 }
 
 input:focus-visible,
 details > summary:focus,
-button:focus {
+button:focus, select:focus {
   outline: none;
 }
 
@@ -132,6 +164,12 @@ select {
   position: relative;
 }
 
+.cart-block[open] > .cart-block__container {
+  -webkit-animation: menu-animation 0.5s ease-out both;
+          animation: menu-animation 0.5s ease-out both;
+  z-index: 111;
+}
+
 .cart-block__container {
   width: 262px;
   position: absolute;
@@ -141,7 +179,7 @@ select {
   padding: 4px 15px 21px 15px;
   border-radius: 5px;
   border: 1px solid #e8e8e8;
-  z-index: 11;
+  z-index: 111;
 }
 
 .cart-block__container::before {
@@ -159,6 +197,7 @@ select {
 }
 
 .cart-block__label {
+  display: block;
   background-color: #f16d7f;
   position: absolute;
   top: -9px;
@@ -240,6 +279,10 @@ select {
           align-items: center;
   height: 100%;
   padding: 0px 15px 0 0;
+  -webkit-transition: -webkit-box-shadow 200ms linear;
+  transition: -webkit-box-shadow 200ms linear;
+  transition: box-shadow 200ms linear;
+  transition: box-shadow 200ms linear, -webkit-box-shadow 200ms linear;
 }
 
 .cart-block__group:hover {
@@ -264,6 +307,8 @@ select {
   color: #c0c0c0;
   cursor: pointer;
   padding: 7px 0 7px 7px;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
 }
 
 .cart-block__delete:hover {
@@ -294,13 +339,13 @@ select {
   border: 1px solid #f16d7f;
   color: #f16d7f;
   margin: 0 0 11px 0;
+  -webkit-transition: color,background 200ms linear;
+  transition: color,background 200ms linear;
 }
 
 .cart-block__button_checkout:hover {
   background: #f16d7f;
   color: #fff;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
 }
 
 .cart-block__button_go-to-cart {
@@ -311,6 +356,10 @@ select {
   text-transform: uppercase;
   color: #4a4a4a;
   border: 1px solid #eaeaea;
+  -webkit-transition: -webkit-box-shadow 200ms linear;
+  transition: -webkit-box-shadow 200ms linear;
+  transition: box-shadow 200ms linear;
+  transition: box-shadow 200ms linear, -webkit-box-shadow 200ms linear;
 }
 
 .cart-block__button_go-to-cart:hover {
@@ -397,6 +446,11 @@ select {
   padding: 0 0 0 2px;
 }
 
+.search-form__browse-link[open] > .dropdown-menu {
+  -webkit-animation: menu-animation 0.5s ease-out both;
+          animation: menu-animation 0.5s ease-out both;
+}
+
 .search-form__input {
   padding: 0 0 0 15px;
   background-color: #ffffff;
@@ -467,6 +521,10 @@ select {
   color: #4f4f4f;
   display: inline-block;
   width: 100%;
+  -webkit-transition: -webkit-box-shadow 200ms linear;
+  transition: -webkit-box-shadow 200ms linear;
+  transition: box-shadow 200ms linear;
+  transition: box-shadow 200ms linear, -webkit-box-shadow 200ms linear;
 }
 
 .dropdown-menu__link:hover {
@@ -480,6 +538,8 @@ select {
   letter-spacing: 0.025em;
   color: #ffffff;
   text-transform: capitalize;
+  -webkit-transition: color,background 200ms linear;
+  transition: color,background 200ms linear;
 }
 
 .button > span {
@@ -507,6 +567,8 @@ select {
 .menu__sub-menu {
   display: none;
   top: 45px;
+  -webkit-animation: menu-animation 0.5s ease-out both;
+          animation: menu-animation 0.5s ease-out both;
 }
 
 .menu__sub-menu_right {
@@ -545,6 +607,8 @@ select {
   text-transform: uppercase;
   color: #222222;
   padding: 18px 22px;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
 }
 
 .menu__link:hover {
@@ -606,6 +670,17 @@ select {
 
 .promotions a {
   display: block;
+  -webkit-transition: -webkit-box-shadow, -webkit-transform 200ms linear;
+  transition: -webkit-box-shadow, -webkit-transform 200ms linear;
+  transition: box-shadow, transform 200ms linear;
+  transition: box-shadow, transform 200ms linear, -webkit-box-shadow, -webkit-transform 200ms linear;
+}
+
+.promotions a:hover {
+  -webkit-box-shadow: 0 0 5px 0px #575757;
+          box-shadow: 0 0 5px 0px #575757;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .promotions__image {
@@ -622,15 +697,6 @@ select {
 .promotions__item {
   width: 100%;
   position: relative;
-}
-
-.promotions__item:hover {
-  -webkit-box-shadow: 0 0 5px 0px #575757;
-          box-shadow: 0 0 5px 0px #575757;
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
 }
 
 .promotions__text {
@@ -697,20 +763,18 @@ select {
 
 .featured__item {
   position: relative;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
+  -webkit-transition: -webkit-box-shadow 200ms linear, -webkit-transform 200ms linear;
+  transition: -webkit-box-shadow 200ms linear, -webkit-transform 200ms linear;
+  transition: box-shadow 200ms linear, transform 200ms linear;
+  transition: box-shadow 200ms linear, transform 200ms linear, -webkit-box-shadow 200ms linear, -webkit-transform 200ms linear;
   text-align-last: left;
 }
 
 .featured__item:hover {
   -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .featured__item:hover .featured__stars {
@@ -741,6 +805,8 @@ select {
   padding: 19px 0 12px 15px;
   display: inline-block;
   text-align: left;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
 }
 
 .featured__text:hover {
@@ -768,18 +834,12 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
 }
 
 .featured__basket-layer:hover {
   opacity: 1;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
 }
 
 .featured__link_inner {
@@ -804,6 +864,10 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: -webkit-box-shadow 200ms linear;
+  transition: -webkit-box-shadow 200ms linear;
+  transition: box-shadow 200ms linear;
+  transition: box-shadow 200ms linear, -webkit-box-shadow 200ms linear;
 }
 
 .featured__link:hover {
@@ -850,8 +914,6 @@ select {
 
 .offer__image:hover .offer__dark-layer {
   opacity: 0;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
 }
 
 .offer__dark-layer {
@@ -859,8 +921,8 @@ select {
   height: 100%;
   width: 100%;
   top: 0;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition: opacity 1000ms linear;
+  transition: opacity 1000ms linear;
 }
 
 .offer__text {
@@ -949,13 +1011,12 @@ select {
   display: flex;
 }
 
-.testimonial__image {
-  padding: 0 28px 0 0;
-}
-
 .testimonial__photo {
   width: 83px;
+  height: 83px;
   border-radius: 50%;
+  margin: 0 28px 0 0;
+  display: block;
 }
 
 .testimonial__body {
@@ -1012,6 +1073,8 @@ select {
   width: 38px;
   height: 4px;
   background-color: #d6d6d6;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
 }
 
 .carousel__item_active, .carousel__item:hover {
@@ -1082,6 +1145,10 @@ select {
   color: #fff;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  -webkit-transition-property: background-color, color, border;
+  transition-property: background-color, color, border;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
 }
 
 .subscribe-form__button:hover {
@@ -1187,6 +1254,8 @@ select {
   letter-spacing: 0.025em;
   color: #898989;
   display: block;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
 }
 
 .footer-menu__link:hover {
@@ -1210,6 +1279,12 @@ select {
   width: 32px;
   height: 32px;
   display: inline-block;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
 }
 
 .icons__link:hover {
@@ -1251,6 +1326,8 @@ select {
   font-weight: 300;
   text-transform: uppercase;
   color: #636363;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
 }
 
 .breadcrumbs__link:hover {
@@ -1370,34 +1447,38 @@ select {
 
 .slider__arrow_left {
   left: 0;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: all 300ms;
+          transition-duration: all 300ms;
 }
 
-.slider__arrow_left:hover {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  padding-left: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+.slider__arrow_left > span {
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
+}
+
+.slider__arrow_left:hover > span {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 
 .slider__arrow_right {
   right: 0;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: all 300ms;
+          transition-duration: all 300ms;
 }
 
-.slider__arrow_right:hover {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-right: 10px;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+.slider__arrow_right > span {
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
+}
+
+.slider__arrow_right:hover > span {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
 }
 
 .adaptive-table {
@@ -1503,6 +1584,10 @@ select {
   background-color: #fff;
   border: 1px solid #eaeaea;
   cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 200ms linear;
+  transition: -webkit-box-shadow 200ms linear;
+  transition: box-shadow 200ms linear;
+  transition: box-shadow 200ms linear, -webkit-box-shadow 200ms linear;
 }
 
 .white-button:hover {
@@ -1747,8 +1832,10 @@ select {
   line-height: 1.2;
   font-weight: 700;
   color: #f16d7f;
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
+  -webkit-transition: -webkit-box-shadow 200ms linear;
+  transition: -webkit-box-shadow 200ms linear;
+  transition: box-shadow 200ms linear;
+  transition: box-shadow 200ms linear, -webkit-box-shadow 200ms linear;
 }
 
 .to-cart-form__button > img {
@@ -1758,12 +1845,15 @@ select {
 .to-cart-form__button:hover {
   -webkit-box-shadow: 0 0 5px 0 #f16d7f;
           box-shadow: 0 0 5px 0 #f16d7f;
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
 }
 
 .accordion__item {
   border-bottom: 1px solid #e8e8e8;
+}
+
+.accordion__item[open] > .accordion__content {
+  -webkit-animation: menu-animation 0.5s ease-out both;
+          animation: menu-animation 0.5s ease-out both;
 }
 
 .accordion__item-header {
@@ -1826,6 +1916,10 @@ select {
   border: 1px solid #eaeaea;
   padding: 15px 55px;
   cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 200ms linear;
+  transition: -webkit-box-shadow 200ms linear;
+  transition: box-shadow 200ms linear;
+  transition: box-shadow 200ms linear, -webkit-box-shadow 200ms linear;
 }
 
 .shipping-address__button:hover {
@@ -1904,7 +1998,7 @@ select {
   margin-bottom: 10px;
 }
 
-.login-form__label > p {
+.login-form__label > span {
   margin-bottom: 10px;
 }
 
@@ -1938,6 +2032,8 @@ select {
   color: #222222;
   padding: 15px 32px;
   display: inline-block;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
 }
 
 .login-form__forgot:hover {
@@ -2093,6 +2189,13 @@ select {
 
 .accordion-small__item {
   margin-bottom: 18px;
+  -webkit-animation: menu-animation 0.5s ease-out both;
+          animation: menu-animation 0.5s ease-out both;
+}
+
+.accordion-small__item[open] > .accordion-small__content {
+  -webkit-animation: menu-animation 0.5s ease-out both;
+          animation: menu-animation 0.5s ease-out both;
 }
 
 .accordion-small__item > summary::after {
@@ -2209,6 +2312,8 @@ select {
   border-right: 1px solid #dfdfdf;
   padding: 0 15px;
   color: #6f6e6e;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
 }
 
 .filter__trending-items > a:first-of-type {
@@ -2327,6 +2432,8 @@ select {
   font-size: 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: color 200ms linear, background-color 200ms linear;
+  transition: color 200ms linear, background-color 200ms linear;
 }
 
 .colored-border-button:hover {
@@ -2366,6 +2473,8 @@ select {
   font-weight: 700;
   color: #c4c4c4;
   padding: 8px 7px;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
 }
 
 .pagination__numeration_active {
