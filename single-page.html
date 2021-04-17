@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <title>Main page</title>
+    <title>Single page</title>
 </head>
 
 <body>
-    <div class="main container">
+    <div class="container">
 
         <header class="header container-inner">
 
@@ -680,59 +679,98 @@
             </ul>
         </nav>
 
+        <nav class="breadcrumbs container-inner">
+            <h1 class="breadcrumbs__heading">new arrivals</h1>
+            <div class="breadcrumbs__links">
+                <a href="index.html" class="breadcrumbs__link">home</a>&nbsp;/&nbsp;<a href="product.html"
+                    class="breadcrumbs__link">men</a>&nbsp;/&nbsp;<span
+                    class="breadcrumbs__link breadcrumbs__link_active">new arrivals</span>
+            </div>
+        </nav>
 
-        <div class="banner container-inner">
-            <div class="banner__container ">
-                <div class="banner__heading">
-                    <h1>the brand</h1>
-                    <h3>of luxerious <span>fashion</span></h3>
+        <div class="slider">
+            <img class="slider__image" src="images/slider/slider-photo.jpg" alt="Slider item">
+            <a href="#" class="slider__arrow_left slider__arrow"><span class="fa-angle-left"></span></a>
+            <a href="#" class="slider__arrow_right slider__arrow"><span class="fa-angle-right"></span></a>
+        </div>
+
+        <div class="container-inner">
+
+            <div class="item-desc single-page__item-desc">
+                <div class="item-desc__wrapper">
+                    <div class="item-desc__collection">
+                        <h4 class="item-desc__collection-heading">women collection</h4>
+                        <div class="item-desc__border"></div>
+                    </div>
+                    <h3 class="item-desc__heading">moschino cheap and chic</h3>
+                    <p class="item-desc__text">Compellingly actualize fully researched processes before proactive
+                        outsourcing.
+                        Progressively syndicate collaborative architectures before cutting-edge services. Completely
+                        visualize
+                        parallel core competencies rather than exceptional portals.</p>
+                    <div class="item-desc__parameters">
+                        <div class="item-desc__parameter">material:&nbsp;<span>cotton</span></div>
+                        <div class="item-desc__parameter">designer:&nbsp;<span>binburhan</span></div>
+                    </div>
+                    <p class="item-desc__price">$561</p>
                 </div>
+
+                <form class="item-desc__form to-cart-form">
+                    <div class="to-cart-form__fields-wrapper">
+                        <div class="to-cart-form__select-wrapper">
+                            <p class="to-cart-form__label">choose color</p>
+                            <div class="to-cart-form__select">
+                                <select class=" to-cart-form__field" id="colors">
+                                    <option value="Red">Red
+                                    </option>
+                                    <option value="Green">Green
+                                    </option>
+                                    <option value="Blue">Blue
+                                    </option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="to-cart-form__select-wrapper">
+                            <p class="to-cart-form__label">choose size</p>
+                            <div class="to-cart-form__select">
+                                <select class=" to-cart-form__field" id="sizes">
+                                    <option value="xxl">XXL
+                                    </option>
+                                    <option value="m">M
+                                    </option>
+                                    <option value="l">L
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="to-cart-form__select-wrapper">
+                            <p class="to-cart-form__label">quantity</p>
+                            <input class="to-cart-form__quantity-input to-cart-form__field" value="2" type="number">
+                        </div>
+                    </div>
+                    <a href="#" class="to-cart-form__button"><img class="to-cart-form__img-cart"
+                            src="images/cart-pink.svg" alt="cart icon">Add to Cart</a>
+
+
+
+                </form>
+
             </div>
         </div>
 
-        <div class="main__promotions promotions container-inner">
-            <div class="promotions__column">
-                <a href="product.html">
-                    <div class="promotions__item"><img class="promotions__image" src="images/item1.jpg" alt="item-1">
-                        <div class="promotions__text">hot deal<h4 class="promotions__heading">for men</h4>
-                        </div>
-                    </div>
-                </a>
-                <a href="product.html">
-                    <div class="promotions__item"><img class="promotions__image" src="images/item2.jpg" alt="item-2">
-                        <div class="promotions__text">LUXIROUS & trendy<h4 class="promotions__heading">ACCESORIES</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="promotions__column">
-                <a href="product.html">
-                    <div class="promotions__item"><img class="promotions__image" src="images/item3.jpg" alt="item-3">
-                        <div class="promotions__text">30% offer<h4 class="promotions__heading">women</h4>
-                        </div>
-                    </div>
-                </a>
-                <a href="product.html">
-                    <div class="promotions__item"><img class="promotions__image" src="images/item4.jpg" alt="item-4">
-                        <div class="promotions__text">new arrivals<h4 class="promotions__heading">for kids</h4>
-                        </div>
-                    </div>
-                </a>
+        <section class="single-page__featured featured container-inner">
 
-            </div>
-        </div>
-
-        <section class="main__featured featured container-inner">
-
-            <h3 class="featured__heading">Featured items</h3>
-            <p class="featured__description text">Shop for items based on what we featured in this week</p>
+            <h3 class="featured__heading">YOU MAY LIKE ALSO</h3>
 
             <div class="featured__items">
 
 
                 <div class="featured__item">
-                    <img src="images/feature-items/feature_item_1.jpg" alt="feature_item_1" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
+                    <img src="images/feature-items/item_1.jpg" alt="feature_item_1" class="featured__img">
+                    <a href="single-page.html" class="featured__text">blaze leggins</a>
                     <div class="featured__bottom">
                         <p class="featured__price">$52.00</p>
                         <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
@@ -750,8 +788,8 @@
 
 
                 <div class="featured__item">
-                    <img src="images/feature-items/feature_item_2.jpg" alt="feature_item_2" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
+                    <img src="images/feature-items/item_2.jpg" alt="feature_item_2" class="featured__img">
+                    <a href="single-page.html" class="featured__text">alexa sweater</a>
                     <div class="featured__bottom">
                         <p class="featured__price">$52.00</p>
                         <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
@@ -765,8 +803,8 @@
                     </div>
                 </div>
                 <div class="featured__item">
-                    <img src="images/feature-items/feature_item_3.jpg" alt="feature_item_3" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
+                    <img src="images/feature-items/item_3.jpg" alt="feature_item_3" class="featured__img">
+                    <a href="single-page.html" class="featured__text">agnes top</a>
                     <div class="featured__bottom">
                         <p class="featured__price">$52.00</p>
                         <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
@@ -779,64 +817,8 @@
                     </div>
                 </div>
                 <div class="featured__item">
-                    <img src="images/feature-items/feature_item_4.jpg" alt="feature_item_4" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
-                    <div class="featured__bottom">
-                        <p class="featured__price">$52.00</p>
-                        <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
-                                class="fa-star"></span><span class="fa-star"></span><span class="fa-star"></span></p>
-                    </div>
-                    <div class="featured__basket-layer"><a class="featured__item-info-link" href="single-page.html"></a>
-                        <span class="featured__link_inner"><a href="shopping-cart.html" class="featured__link"><img
-                                    class="featured__img-basket" src="images/feature-items/featured_basket.svg"
-                                    alt="basket">Add to Cart</a></span>
-                    </div>
-                </div>
-                <div class="featured__item">
-                    <img src="images/feature-items/feature_item_5.jpg" alt="feature_item_5" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
-                    <div class="featured__bottom">
-                        <p class="featured__price">$52.00</p>
-                        <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
-                                class="fa-star"></span><span class="fa-star"></span><span class="fa-star"></span></p>
-                    </div>
-                    <div class="featured__basket-layer"><a class="featured__item-info-link" href="single-page.html"></a>
-                        <span class="featured__link_inner"><a href="shopping-cart.html" class="featured__link"><img
-                                    class="featured__img-basket" src="images/feature-items/featured_basket.svg"
-                                    alt="basket">Add to Cart</a></span>
-                    </div>
-                </div>
-                <div class="featured__item">
-                    <img src="images/feature-items/feature_item_6.jpg" alt="feature_item_6" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
-                    <div class="featured__bottom">
-                        <p class="featured__price">$52.00</p>
-                        <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
-                                class="fa-star"></span><span class="fa-star"></span><span class="fa-star"></span></p>
-                    </div>
-                    <div class="featured__basket-layer"><a class="featured__item-info-link" href="single-page.html"></a>
-                        <span class="featured__link_inner"><a href="shopping-cart.html" class="featured__link"><img
-                                    class="featured__img-basket" src="images/feature-items/featured_basket.svg"
-                                    alt="basket">Add to Cart</a></span>
-                    </div>
-                </div>
-                <div class="featured__item">
-                    <img src="images/feature-items/feature_item_7.jpg" alt="feature_item_7" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
-                    <div class="featured__bottom">
-                        <p class="featured__price">$52.00</p>
-                        <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
-                                class="fa-star"></span><span class="fa-star"></span><span class="fa-star"></span></p>
-                    </div>
-                    <div class="featured__basket-layer"><a class="featured__item-info-link" href="single-page.html"></a>
-                        <span class="featured__link_inner"><a href="shopping-cart.html" class="featured__link"><img
-                                    class="featured__img-basket" src="images/feature-items/featured_basket.svg"
-                                    alt="basket">Add to Cart</a></span>
-                    </div>
-                </div>
-                <div class="featured__item">
-                    <img src="images/feature-items/feature_item_8.jpg" alt="feature_item_8" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
+                    <img src="images/feature-items/item_4.jpg" alt="feature_item_4" class="featured__img">
+                    <a href="single-page.html" class="featured__text">sylva sweater</a>
                     <div class="featured__bottom">
                         <p class="featured__price">$52.00</p>
                         <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
@@ -849,57 +831,16 @@
                     </div>
                 </div>
             </div>
-            <a href="product.html" class="featured__button button">browse all product <span
-                    class="fa-long-arrow-right"></span></a>
+
         </section>
 
-        <div class="main__offer offer container-inner">
-
-            <div class="offer__image">
-                <a class="offer__main-link" href="#">
-                    <img src="images/offer/offer_image_layer.png" alt="offer image layer" class="offer__dark-layer">
-                    <div class="offer__text">
-                        <h3 class="offer__heading">30% <span>offer</span></h3>
-                        for women
-                    </div>
-                </a>
-            </div>
 
 
-            <div class="offer__advantages">
-                <div class="offer__advantage">
-
-                    <div class="advantage__icon"><img src="images/offer/offer_icon_1.svg" alt="offer-icon-1"></div>
-                    <article class="advantge__description">
-                        <h4 class="advantage__heading">free delivery</h4>
-                        <p class="text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                            extensive models.</p>
-                    </article>
-                </div>
-                <div class="offer__advantage advantage">
-                    <div class="advantage__icon"><img src="images/offer/offer_icon_2.svg" alt="offer-icon-2"></div>
-                    <article class="advantge__description">
-                        <h4 class="advantage__heading">sales & discount</h4>
-                        <p class="text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                            extensive models.</p>
-                    </article>
-                </div>
-                <div class="offer__advantage">
-                    <div class="advantage__icon"><img src="images/offer/offer_icon_3.svg" alt="offer-icon-3"></div>
-                    <article class="advantge__description">
-                        <h4 class="advantage__heading">quality assurance</h4>
-                        <p class="text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                            extensive models.</p>
-                    </article>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="subscription main__subscription container-inner">
+        <div class="subscription single-page__subscription container-inner">
             <div class="subscription__testimonials testimonisls">
                 <figure class="subscription__testimonial testimonial">
-                    <img class="testimonial__image testimonial__photo" src="images/subscription/testimonial_photo.jpg" alt="photo">
+                    <img class="testimonial__image testimonial__photo" src="images/subscription/testimonial_photo.jpg"
+                        alt="photo">
                     <figcaption class="testimonial__body">
                         <p class="testimonial__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
                             a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
@@ -1008,6 +949,7 @@
         </footer>
 
     </div>
+
 </body>
 
 </html>

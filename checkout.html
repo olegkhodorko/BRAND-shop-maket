@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <title>Main page</title>
+    <title>Checkout page</title>
 </head>
 
 <body>
-    <div class="main container">
+    <div class="container">
 
+
+        
         <header class="header container-inner">
 
             <div class="header__head container-inner">
@@ -146,8 +147,6 @@
 
             </div>
         </header>
-
-
 
         <nav class="header__menu container-inner">
             <ul class="menu">
@@ -680,223 +679,134 @@
             </ul>
         </nav>
 
+        <nav class="breadcrumbs container-inner">
+            <h1 class="breadcrumbs__heading">new arrivals</h1>
+            <div class="breadcrumbs__links">
+                <a href="index.html" class="breadcrumbs__link">home</a>&nbsp;/&nbsp;<a href="product.html"
+                    class="breadcrumbs__link">men</a>&nbsp;/&nbsp;<span
+                    class="breadcrumbs__link breadcrumbs__link_active">new arrivals</span>
+            </div>
+        </nav>
 
-        <div class="banner container-inner">
-            <div class="banner__container ">
-                <div class="banner__heading">
-                    <h1>the brand</h1>
-                    <h3>of luxerious <span>fashion</span></h3>
-                </div>
+        <div class="checkout container-inner">
+            <div class="checkout__accordion accordion">
+                <details open class="accordion__item">
+                    <summary class="accordion__item-header">01. shipping address</summary>
+                    <div class="shipping-address accordion__content">
+                        <div class="shipping-address__left">
+                            <h3 class="shipping-address__heading">Check as a guest or register</h3>
+                            <p class="text">Register with us for future convenience</p>
+                            <form id="shipping-address__choice-form" action="#"
+                                class="shipping-address__choice choice-form">
+                                <label><input name="register" type="radio" value="guest"> checkout as guest</label>
+                                <label><input name="register" type="radio" value="register" checked> register</label>
+                            </form>
+                            <h3 class="shipping-address__heading">register and save time!</h3>
+                            <p class="text">Register with us for future convenience</p>
+                            <ul class="shipping-address__advantages">
+                                <li class="shipping-address__advantages-item text">Fast and easy checkout</li>
+                                <li class="shipping-address__advantages-item text">Easy access to your order history and
+                                    status</li>
+                            </ul>
+                            <input type="submit" form="shipping-address__choice-form" class="shipping-address__button" value="CONTINUE">
+                        </div>
+
+                        <div class="shipping-address__right">
+
+                            <h3 class="shipping-address__heading">Already registered?</h3>
+
+                            <p class="text">Please log in below</p>
+
+                            <form action="#" class="login-form shipping-address__login-form">
+                                <label class="login-form__label"><input name="email" type="email" class="login-form__input"
+                                        required><span>email address</span></label>
+                                <label class="login-form__label"><input name="password" type="password" class="login-form__input"
+                                        required><span>password</span></label>
+                                <p class="login-form__required-text">* Required Fields</p>
+                                <div class="login-form__buttons">
+                                        <input class="shipping-address__button login-form__button" type="submit" value="LOG&nbsp;IN">
+                                    <a href="#" class="login-form__forgot">Forgot&nbsp;Password&nbsp;?</a>
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__item-header">02. billing information</summary>
+                    <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eum praesentium maxime,
+                            excepturi consectetur recusandae esse soluta minus rerum hic sequi ullam adipisci a
+                            necessitatibus est natus quas voluptas ipsam quia! Aliquid sunt nulla, quis voluptatibus
+                            architecto minus odio cupiditate, fugit harum vel corporis modi, omnis et maxime qui sequi
+                            suscipit consequatur. Odio id voluptatibus saepe nemo, quasi sint molestiae ullam soluta
+                            accusamus itaque sit tempora perspiciatis asperiores! Consequatur facilis temporibus labore
+                            nemo quam, dicta assumenda ipsam pariatur, quisquam in itaque facere sed hic! Alias fugiat,
+                            minus, pariatur neque suscipit unde impedit ipsam exercitationem dicta officia accusantium
+                            labore ipsa deleniti.</p>
+                    </div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__item-header">03. shipping information</summary>
+                    <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eum praesentium maxime,
+                            excepturi consectetur recusandae esse soluta minus rerum hic sequi ullam adipisci a
+                            necessitatibus est natus quas voluptas ipsam quia! Aliquid sunt nulla, quis voluptatibus
+                            architecto minus odio cupiditate, fugit harum vel corporis modi, omnis et maxime qui sequi
+                            suscipit consequatur. Odio id voluptatibus saepe nemo, quasi sint molestiae ullam soluta
+                            accusamus itaque sit tempora perspiciatis asperiores! Consequatur facilis temporibus labore
+                            nemo quam, dicta assumenda ipsam pariatur, quisquam in itaque facere sed hic! Alias fugiat,
+                            minus, pariatur neque suscipit unde impedit ipsam exercitationem dicta officia accusantium
+                            labore ipsa deleniti.</p>
+                    </div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__item-header">04. shipping method</summary>
+                    <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eum praesentium maxime,
+                            excepturi consectetur recusandae esse soluta minus rerum hic sequi ullam adipisci a
+                            necessitatibus est natus quas voluptas ipsam quia! Aliquid sunt nulla, quis voluptatibus
+                            architecto minus odio cupiditate, fugit harum vel corporis modi, omnis et maxime qui sequi
+                            suscipit consequatur. Odio id voluptatibus saepe nemo, quasi sint molestiae ullam soluta
+                            accusamus itaque sit tempora perspiciatis asperiores! Consequatur facilis temporibus labore
+                            nemo quam, dicta assumenda ipsam pariatur, quisquam in itaque facere sed hic! Alias fugiat,
+                            minus, pariatur neque suscipit unde impedit ipsam exercitationem dicta officia accusantium
+                            labore ipsa deleniti.</p>
+                    </div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__item-header">05. payment method</summary>
+                    <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eum praesentium maxime,
+                            excepturi consectetur recusandae esse soluta minus rerum hic sequi ullam adipisci a
+                            necessitatibus est natus quas voluptas ipsam quia! Aliquid sunt nulla, quis voluptatibus
+                            architecto minus odio cupiditate, fugit harum vel corporis modi, omnis et maxime qui sequi
+                            suscipit consequatur. Odio id voluptatibus saepe nemo, quasi sint molestiae ullam soluta
+                            accusamus itaque sit tempora perspiciatis asperiores! Consequatur facilis temporibus labore
+                            nemo quam, dicta assumenda ipsam pariatur, quisquam in itaque facere sed hic! Alias fugiat,
+                            minus, pariatur neque suscipit unde impedit ipsam exercitationem dicta officia accusantium
+                            labore ipsa deleniti.</p>
+                    </div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__item-header">06. order review</summary>
+                    <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eum praesentium maxime,
+                            excepturi consectetur recusandae esse soluta minus rerum hic sequi ullam adipisci a
+                            necessitatibus est natus quas voluptas ipsam quia! Aliquid sunt nulla, quis voluptatibus
+                            architecto minus odio cupiditate, fugit harum vel corporis modi, omnis et maxime qui sequi
+                            suscipit consequatur. Odio id voluptatibus saepe nemo, quasi sint molestiae ullam soluta
+                            accusamus itaque sit tempora perspiciatis asperiores! Consequatur facilis temporibus labore
+                            nemo quam, dicta assumenda ipsam pariatur, quisquam in itaque facere sed hic! Alias fugiat,
+                            minus, pariatur neque suscipit unde impedit ipsam exercitationem dicta officia accusantium
+                            labore ipsa deleniti.</p>
+                    </div>
+                </details>
             </div>
         </div>
 
-        <div class="main__promotions promotions container-inner">
-            <div class="promotions__column">
-                <a href="product.html">
-                    <div class="promotions__item"><img class="promotions__image" src="images/item1.jpg" alt="item-1">
-                        <div class="promotions__text">hot deal<h4 class="promotions__heading">for men</h4>
-                        </div>
-                    </div>
-                </a>
-                <a href="product.html">
-                    <div class="promotions__item"><img class="promotions__image" src="images/item2.jpg" alt="item-2">
-                        <div class="promotions__text">LUXIROUS & trendy<h4 class="promotions__heading">ACCESORIES</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="promotions__column">
-                <a href="product.html">
-                    <div class="promotions__item"><img class="promotions__image" src="images/item3.jpg" alt="item-3">
-                        <div class="promotions__text">30% offer<h4 class="promotions__heading">women</h4>
-                        </div>
-                    </div>
-                </a>
-                <a href="product.html">
-                    <div class="promotions__item"><img class="promotions__image" src="images/item4.jpg" alt="item-4">
-                        <div class="promotions__text">new arrivals<h4 class="promotions__heading">for kids</h4>
-                        </div>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-
-        <section class="main__featured featured container-inner">
-
-            <h3 class="featured__heading">Featured items</h3>
-            <p class="featured__description text">Shop for items based on what we featured in this week</p>
-
-            <div class="featured__items">
-
-
-                <div class="featured__item">
-                    <img src="images/feature-items/feature_item_1.jpg" alt="feature_item_1" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
-                    <div class="featured__bottom">
-                        <p class="featured__price">$52.00</p>
-                        <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
-                                class="fa-star"></span><span class="fa-star"></span><span class="fa-star"></span></p>
-                    </div>
-
-                    <div class="featured__basket-layer"><a class="featured__item-info-link" href="single-page.html"></a>
-                        <span class="featured__link_inner"><a href="shopping-cart.html" class="featured__link"><img
-                                    class="featured__img-basket" src="images/feature-items/featured_basket.svg"
-                                    alt="basket">Add to Cart</a></span>
-                    </div>
-
-                </div>
-
-
-
-                <div class="featured__item">
-                    <img src="images/feature-items/feature_item_2.jpg" alt="feature_item_2" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
-                    <div class="featured__bottom">
-                        <p class="featured__price">$52.00</p>
-                        <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
-                                class="fa-star"></span><span class="fa-star"></span><span class="fa-star"></span></p>
-                    </div>
-
-                    <div class="featured__basket-layer"><a class="featured__item-info-link" href="single-page.html"></a>
-                        <span class="featured__link_inner"><a href="shopping-cart.html" class="featured__link"><img
-                                    class="featured__img-basket" src="images/feature-items/featured_basket.svg"
-                                    alt="basket">Add to Cart</a></span>
-                    </div>
-                </div>
-                <div class="featured__item">
-                    <img src="images/feature-items/feature_item_3.jpg" alt="feature_item_3" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
-                    <div class="featured__bottom">
-                        <p class="featured__price">$52.00</p>
-                        <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
-                                class="fa-star"></span><span class="fa-star"></span><span class="fa-star"></span></p>
-                    </div>
-                    <div class="featured__basket-layer"><a class="featured__item-info-link" href="single-page.html"></a>
-                        <span class="featured__link_inner"><a href="shopping-cart.html" class="featured__link"><img
-                                    class="featured__img-basket" src="images/feature-items/featured_basket.svg"
-                                    alt="basket">Add to Cart</a></span>
-                    </div>
-                </div>
-                <div class="featured__item">
-                    <img src="images/feature-items/feature_item_4.jpg" alt="feature_item_4" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
-                    <div class="featured__bottom">
-                        <p class="featured__price">$52.00</p>
-                        <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
-                                class="fa-star"></span><span class="fa-star"></span><span class="fa-star"></span></p>
-                    </div>
-                    <div class="featured__basket-layer"><a class="featured__item-info-link" href="single-page.html"></a>
-                        <span class="featured__link_inner"><a href="shopping-cart.html" class="featured__link"><img
-                                    class="featured__img-basket" src="images/feature-items/featured_basket.svg"
-                                    alt="basket">Add to Cart</a></span>
-                    </div>
-                </div>
-                <div class="featured__item">
-                    <img src="images/feature-items/feature_item_5.jpg" alt="feature_item_5" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
-                    <div class="featured__bottom">
-                        <p class="featured__price">$52.00</p>
-                        <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
-                                class="fa-star"></span><span class="fa-star"></span><span class="fa-star"></span></p>
-                    </div>
-                    <div class="featured__basket-layer"><a class="featured__item-info-link" href="single-page.html"></a>
-                        <span class="featured__link_inner"><a href="shopping-cart.html" class="featured__link"><img
-                                    class="featured__img-basket" src="images/feature-items/featured_basket.svg"
-                                    alt="basket">Add to Cart</a></span>
-                    </div>
-                </div>
-                <div class="featured__item">
-                    <img src="images/feature-items/feature_item_6.jpg" alt="feature_item_6" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
-                    <div class="featured__bottom">
-                        <p class="featured__price">$52.00</p>
-                        <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
-                                class="fa-star"></span><span class="fa-star"></span><span class="fa-star"></span></p>
-                    </div>
-                    <div class="featured__basket-layer"><a class="featured__item-info-link" href="single-page.html"></a>
-                        <span class="featured__link_inner"><a href="shopping-cart.html" class="featured__link"><img
-                                    class="featured__img-basket" src="images/feature-items/featured_basket.svg"
-                                    alt="basket">Add to Cart</a></span>
-                    </div>
-                </div>
-                <div class="featured__item">
-                    <img src="images/feature-items/feature_item_7.jpg" alt="feature_item_7" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
-                    <div class="featured__bottom">
-                        <p class="featured__price">$52.00</p>
-                        <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
-                                class="fa-star"></span><span class="fa-star"></span><span class="fa-star"></span></p>
-                    </div>
-                    <div class="featured__basket-layer"><a class="featured__item-info-link" href="single-page.html"></a>
-                        <span class="featured__link_inner"><a href="shopping-cart.html" class="featured__link"><img
-                                    class="featured__img-basket" src="images/feature-items/featured_basket.svg"
-                                    alt="basket">Add to Cart</a></span>
-                    </div>
-                </div>
-                <div class="featured__item">
-                    <img src="images/feature-items/feature_item_8.jpg" alt="feature_item_8" class="featured__img">
-                    <a href="single-page.html" class="featured__text">mango people t-shirt</a>
-                    <div class="featured__bottom">
-                        <p class="featured__price">$52.00</p>
-                        <p class="featured__stars"><span class="fa-star"></span><span class="fa-star"></span><span
-                                class="fa-star"></span><span class="fa-star"></span><span class="fa-star"></span></p>
-                    </div>
-                    <div class="featured__basket-layer"><a class="featured__item-info-link" href="single-page.html"></a>
-                        <span class="featured__link_inner"><a href="shopping-cart.html" class="featured__link"><img
-                                    class="featured__img-basket" src="images/feature-items/featured_basket.svg"
-                                    alt="basket">Add to Cart</a></span>
-                    </div>
-                </div>
-            </div>
-            <a href="product.html" class="featured__button button">browse all product <span
-                    class="fa-long-arrow-right"></span></a>
-        </section>
-
-        <div class="main__offer offer container-inner">
-
-            <div class="offer__image">
-                <a class="offer__main-link" href="#">
-                    <img src="images/offer/offer_image_layer.png" alt="offer image layer" class="offer__dark-layer">
-                    <div class="offer__text">
-                        <h3 class="offer__heading">30% <span>offer</span></h3>
-                        for women
-                    </div>
-                </a>
-            </div>
-
-
-            <div class="offer__advantages">
-                <div class="offer__advantage">
-
-                    <div class="advantage__icon"><img src="images/offer/offer_icon_1.svg" alt="offer-icon-1"></div>
-                    <article class="advantge__description">
-                        <h4 class="advantage__heading">free delivery</h4>
-                        <p class="text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                            extensive models.</p>
-                    </article>
-                </div>
-                <div class="offer__advantage advantage">
-                    <div class="advantage__icon"><img src="images/offer/offer_icon_2.svg" alt="offer-icon-2"></div>
-                    <article class="advantge__description">
-                        <h4 class="advantage__heading">sales & discount</h4>
-                        <p class="text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                            extensive models.</p>
-                    </article>
-                </div>
-                <div class="offer__advantage">
-                    <div class="advantage__icon"><img src="images/offer/offer_icon_3.svg" alt="offer-icon-3"></div>
-                    <article class="advantge__description">
-                        <h4 class="advantage__heading">quality assurance</h4>
-                        <p class="text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                            extensive models.</p>
-                    </article>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="subscription main__subscription container-inner">
+        <div class="subscription checkout__subscription container-inner">
             <div class="subscription__testimonials testimonisls">
                 <figure class="subscription__testimonial testimonial">
                     <img class="testimonial__image testimonial__photo" src="images/subscription/testimonial_photo.jpg" alt="photo">
@@ -1008,6 +918,7 @@
         </footer>
 
     </div>
+
 </body>
 
 </html>
